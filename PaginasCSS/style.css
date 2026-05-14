@@ -1,0 +1,76 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0; margin: 0;
+    background-color: rgb(145, 193, 248);
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex: 1;
+}
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    height: 15vh;
+    width: 100vw;
+    color: rgb(255, 255, 255);
+    background-color:  rgb(30, 50, 160);  
+}
+.navegacao a{
+    color: rgb(255, 255, 255);
+    padding: 5vh;
+    text-decoration: none;
+}
+
+.cardInformativo{
+    padding: 10vh;
+    color: rgb(30, 50, 160);
+    border-radius: 3vh;
+    width: auto;
+    height: auto;
+    background: rgba(255,255,255,0.2);
+    margin: 5vh;
+}
+.flexCard{
+    display: flex;
+}
+.cardInformativo h1{
+    justify-content: center;
+    text-align: center;
+}
+.cardConteudo{
+    display: flex;
+    text-align: justify;
+    font-size: 3ch;
+    justify-content: center;
+    align-items: center;
+}
+.cardImagem img{
+    border-radius: 3vh;
+    width: 50vh;
+    height: 60vh;
+    margin: 5vh;
+}
+.botaoVoltar{
+    padding:5vh;
+    text-decoration: none;
+    color: rgb( 30, 50, 160);
+    font-size: 3vh;
+    display: inline-block;
+}
+
+.rodape{
+    background-color:  rgb(30, 50, 160);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 100vw;    
+    color: white
+}
+
