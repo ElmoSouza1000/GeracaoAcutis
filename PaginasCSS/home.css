@@ -1,0 +1,37 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0; margin: 0;
+    background-color: rgb(145, 193, 248);
+}
+main{
+    flex: 1;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10vh;
+    width: 100vw;
+}
+header h1{
+    color: rgb(255, 255, 255);
+}
+.navegacao a{
+    color: rgb(255, 255, 255);
+    padding: 5vh;
+    text-decoration: none;
+}
+footer, header{
+    background-color:  rgb(30, 50, 160);
+}
+footer{
+    background-color:  rgb(30, 50, 160);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vg;    
+    color: white
+}
