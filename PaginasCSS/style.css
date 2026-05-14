@@ -1,76 +1,95 @@
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 0; margin: 0;
+    padding: 0; 
+    margin: 0;
     background-color: rgb(145, 193, 248);
+    font-family: sans-serif; 
 }
-main{
+
+main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    flex: 1;
-}
-.cabecalho{
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly;
-    height: 15vh;
-    width: 100vw;
-    color: rgb(255, 255, 255);
-    background-color:  rgb(30, 50, 160);  
-}
-.navegacao a{
-    color: rgb(255, 255, 255);
-    padding: 5vh;
-    text-decoration: none;
+    flex: 1; 
+    padding: 20px;
 }
 
-.cardInformativo{
-    padding: 10vh;
+.cabecalho, .rodape {
+    display: flex;
+    align-items: center;
+    background-color: rgb(30, 50, 160);
+    color: white;
+    min-height: 15vh;
+    width: 100%;
+}
+.title h1{
+    display: flex;
+    align-items: center;
+}
+.title img{
+    align-items: center;
+    justify-content: center;
+    width: 10vh;
+    height: auto;
+}
+
+.cabecalho {
+    justify-content: space-evenly;
+}
+
+.rodape {
+    justify-content: center;
+}
+
+.navegacao a {
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cardInformativo {
+    display: flex;
+    flex-direction: column;
     color: rgb(30, 50, 160);
     border-radius: 3vh;
-    width: auto;
-    height: auto;
-    background: rgba(255,255,255,0.2);
-    margin: 5vh;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 2vh;
+    max-width: 1200px; 
 }
-.flexCard{
+
+.flexCard {
+    padding: 5vh;
     display: flex;
+    align-items: center;
+    gap: 20px;
 }
-.cardInformativo h1{
-    justify-content: center;
+
+.cardInformativo h1 {
     text-align: center;
+    margin-bottom: 20px;
 }
-.cardConteudo{
-    display: flex;
+
+.cardConteudo {
+    width: 80vh;
     text-align: justify;
-    font-size: 3ch;
-    justify-content: center;
-    align-items: center;
+    font-size: 1.2rem; 
+    line-height: 1.6;
 }
-.cardImagem img{
+
+.cardImagem img {
     border-radius: 3vh;
-    width: 50vh;
-    height: 60vh;
-    margin: 5vh;
+    width: 100%;
+    min-width: 250px;
+    max-width: 350px; 
+    height: auto;
 }
-.botaoVoltar{
-    padding:5vh;
+
+.botaoVoltar {
+    padding: 2vh;
     text-decoration: none;
-    color: rgb( 30, 50, 160);
+    color: rgb(30, 50, 160);
     font-size: 3vh;
-    display: inline-block;
 }
-
-.rodape{
-    background-color:  rgb(30, 50, 160);  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15vh;
-    width: 100vw;    
-    color: white
-}
-
