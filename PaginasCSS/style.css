@@ -50,13 +50,85 @@ main {
     text-decoration: none;
     font-weight: bold;
 }
+.painel{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    height: auto;
+    gap: 10px;
+}
 
+.card{
+    min-height: 300px;
+    min-width: 300px;
+    display: flex;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5vh;
+    background: center/cover no-repeat;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    text-decoration: none;
+    position: relative;
+}
+
+.card h1{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); 
+    opacity: 0; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(0px);
+    transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.card:hover h1{
+    opacity: 1;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#terezinha{
+    background-image: url(/img/santosImagem/terezinha.jpg);
+}
+#joseLuiz{
+    background-image: url(/img/santosImagem/joseLuiz.jpg);
+}
+#odetinha{
+    background-image: url(/img/santosImagem/odetinha.jpg);
+}
+#joanaDarc{
+    background-image: url(/img/santosImagem/joana.jpg);
+}
+#familiaMartin{
+    background-image: url(/img/santosImagem/familiaMartin.jpg);
+}
+#gianna{
+    background-image: url(/img/santosImagem/gianna.jpg);
+}
+#pastorinhos{
+    background-image: url(/img/santosImagem/pastorinhos.jpg);
+}
+#carloAcutis{
+    background-image: url(/img/santosImagem/carlo.webp);
+}
+#chiaraCorbella{
+    background-image: url(/img/santosImagem/chiara_violino.jpg);
+}
+#guido{
+    background-image: url(/img/santosImagem/guido.jpg);
+}
 .cardInformativo {
     display: flex;
     flex-direction: column;
     color: rgb(3, 18, 102);
     border-radius: 3vh;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.418);
     margin: 2vh;
     max-width: 1200px; 
 }
