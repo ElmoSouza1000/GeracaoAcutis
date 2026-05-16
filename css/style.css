@@ -44,29 +44,62 @@ body {
 }
 .painel{
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     height: auto;
-    gap: 10px;
+    gap: 5vh;
     padding: 5vh;
 }
 
-.card{
+.card, .cardHome{
+    margin: 5vh;
     min-height: 300px;
     min-width: 300px;
-    display: flex;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 5vh;
     background: center/cover no-repeat;
     justify-content: center;
     align-items: center;
-    text-align: center;
     overflow: hidden;
     text-decoration: none;
     position: relative;
+    text-align: center;
+    gap: 4vh;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+.cardHome h1{
+    margin-bottom: 0;
+    max-width: 100vh;
+}
+.cardHome p{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; 
+    max-width: 100vh;
+}
+.cardHome a{
+    margin-bottom: 5vh;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#missa{
+    background-image: url(/img/wallpaper/missa.png);
+}
+#terco{
+    background-image: url(/img/wallpaper/santoTerço.avif);
+}
+
+#agostinho{
+    background-image: url(/img/santosImagem/agostinho.jpg);
 }
 
 .card h1{
-    color: rgb(255, 255, 255);
+    text-align: center;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); 
     opacity: 0; 
