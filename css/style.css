@@ -1,0 +1,366 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0; 
+    margin: 0;
+    background-color: rgb(254, 255, 172);
+    font-family: sans-serif; 
+}
+
+
+.cabecalho, .rodape {
+    display: flex;
+    align-items: center;
+    background-color: rgb(3, 18, 102);
+    color: white;
+    min-height: 15vh;
+    width: 100%;
+}
+
+.title h2{
+    display: flex;
+    align-items: center;
+}
+.title img{
+    align-items: center;
+    justify-content: center;
+    width: 10vh;
+    height: auto;
+}
+
+.cabecalho {
+    justify-content: space-evenly;
+}
+
+.rodape {
+    justify-content: center;
+}
+
+.navegacao a {
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.painel{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    height: auto;
+    gap: 10px;
+}
+
+.card{
+    min-height: 300px;
+    min-width: 300px;
+    display: flex;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5vh;
+    background: center/cover no-repeat;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    text-decoration: none;
+    position: relative;
+}
+
+.card h1{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); 
+    opacity: 0; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(0px);
+    transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.card:hover h1{
+    opacity: 1;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#terezinha{
+    background-image: url(/img/santosImagem/terezinha.jpg);
+}
+#joseLuiz{
+    background-image: url(/img/santosImagem/joseLuiz.jpg);
+}
+#odetinha{
+    background-image: url(/img/santosImagem/odetinha.jpg);
+}
+#joanaDarc{
+    background-image: url(/img/santosImagem/joana.jpg);
+}
+#familiaMartin{
+    background-image: url(/img/santosImagem/familiaMartin.jpg);
+}
+#gianna{
+    background-image: url(/img/santosImagem/gianna.jpg);
+}
+#pastorinhos{
+    background-image: url(/img/santosImagem/pastorinhos.jpg);
+}
+#carloAcutis{
+    background-image: url(/img/santosImagem/carlo.webp);
+}
+#chiaraCorbella{
+    background-image: url(/img/santosImagem/chiara_violino.jpg);
+}
+#guido{
+    background-image: url(/img/santosImagem/guido.jpg);
+}
+.cardInformativo {
+    display: flex;
+    flex-direction: column;
+    color: rgb(3, 18, 102);
+    border-radius: 3vh;
+    background: rgba(255, 255, 255, 0.418);
+    margin: 2vh;
+    max-width: 1200px; 
+}
+
+.flexCard {
+    padding: 5vh;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cardInformativo h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cardConteudo {
+    width: 80vh;
+    text-align: justify;
+    font-size: 1.2rem; 
+    line-height: 1.6;
+}
+
+.cardImagem img {
+    border-radius: 3vh;
+    width: 100%;
+    min-width: 250px;
+    max-width: 350px; 
+    height: auto;
+}
+
+.botaoVoltar {
+    padding: 2vh;
+    text-decoration: none;
+    color: rgb(3, 18, 102);
+    font-size: 3vh;
+}
+
+.container-carrossel{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 80vh;
+    padding: 40px;
+}
+
+.imagem-santo img{
+    width: 400px;
+}
+
+.texto-santo{
+    max-width: 500px;
+}
+
+.texto-santo h1{
+    font-size: 50px;
+}
+
+.texto-santo p{
+    font-size: 24px;
+}
+
+main {
+    display: block;
+    flex: 1;
+    padding: 0;
+}
+
+#mHome{
+    padding: 0;
+    display: block;
+}
+
+.carrossel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    background-color: rgb(3, 18, 102);
+}
+
+/* Trilha que contém todos os slides lado a lado */
+.carrossel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.8s ease;
+}
+
+/* Cada slide ocupa 100% da largura */
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Camada azul escura por cima da imagem de fundo */
+.slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(3, 18, 102, 0.75);
+    z-index: 1;
+}
+
+/* Imagem de fundo desfocada */
+.slide-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px) brightness(0.4);
+    z-index: 0;
+}
+
+/* Conteúdo visível do slide */
+.slide-conteudo {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 0 60px;
+    width: 100%;
+    max-width: 1200px;
+    opacity: 0;
+    transition: opacity 0.7s ease 0.3s;
+}
+
+/* Quando o slide está ativo, o conteúdo aparece */
+.slide.ativo .slide-conteudo {
+    opacity: 1;
+}
+
+/* Foto do santo */
+.slide-imagem {
+    flex-shrink: 0;
+    width: clamp(280px, 35vw, 480px);
+    height: clamp(340px, 42vw, 580px);
+    border-radius: 2px 40% 2px 40%;
+    overflow: hidden;
+    border: 3px solid rgba(254, 255, 172, 0.6);
+}
+
+.slide-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* Linha divisória entre imagem e texto */
+.slide-divisor {
+    width: 2px;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent, rgba(254, 255, 172, 0.8), transparent);
+    flex-shrink: 0;
+}
+
+/* Bloco de texto */
+.slide-texto {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.slide-nome {
+    font-size: clamp(1.4rem, 3vw, 2.5rem);
+    color: rgb(254, 255, 172);
+    letter-spacing: 0.05em;
+}
+
+.slide-frase {
+    font-style: italic;
+    font-size: clamp(1rem, 1.8vw, 1.35rem);
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.7;
+    border-left: 3px solid rgba(254, 255, 172, 0.7);
+    padding-left: 18px;
+}
+
+.slide-subtitulo {
+    font-size: 0.9rem;
+    color: rgba(254, 255, 172, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+/* Botões prev/next */
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(254, 255, 172, 0.12);
+    border: 1.5px solid rgba(254, 255, 172, 0.4);
+    color: rgb(254, 255, 172);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carrossel-btn:hover {
+    background: rgba(254, 255, 172, 0.25);
+}
+
+.carrossel-btn.prev { left: 20px; }
+.carrossel-btn.next { right: 20px; }
+
+/* Bolinhas indicadoras */
+.carrossel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(254, 255, 172, 0.35);
+    border: 1.5px solid rgba(254, 255, 172, 0.5);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.dot.ativo {
+    background: rgb(254, 255, 172);
+    transform: scale(1.4);
+}

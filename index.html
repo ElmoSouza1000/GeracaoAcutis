@@ -1,28 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/PaginasCSS/style.css">
-</head>
-<body>
-    <header class="cabecalho">
-        <div class="title">
-            <h1>Geração Acutis <img src="/img/icons/vaticanoFlag.png" alt=""></h1>
-        </div>
-        <nav class="navegacao">
-            <a href="/index.html">Home</a>
-            <a href="/PaginasHTML/sobreNos.html">Sobre Nós</a>
-            <a href="/PaginasHTML/cards.html">Cards</a>
-        </nav>
-    </header>
-    <main id="mHome">
-        <img src="/img/banner-home.jpg" alt="" style="max-width: 80%;">
-    </main>
 
-    <footer class="rodape">
-        <p>&copy; Todos são chamados à santidade</p>
-    </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geração Acutis</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="title">
+      <h2>Geração Acutis <img src="/img/icons/vaticanoFlag.png" alt=""></h2>
+    </div>
+    <nav class="navegacao">
+      <a href="/index.html">Home</a>
+      <a href="/pages/sobreNos.html">Sobre Nós</a>
+      <a href="/pages/cards.html">Cards</a>
+    </nav>
+  </header>
+
+  <section class="carrossel"></section>
+
+
+  <main id="mHome">
+    <section class="carrossel-wrapper">
+      <div class="carrossel-track" id="track">
+
+        <div class="slide ativo">
+          <div class="slide-bg" style="background-image: url('/img/santosImagem/carlo.webp');"></div>
+          <div class="slide-conteudo">
+            <div class="slide-imagem">
+              <img src="/img/santosImagem/carlo.webp" alt="Carlo Acutis">
+            </div>
+            <div class="slide-divisor"></div>
+            <div class="slide-texto">
+              <span class="slide-subtitulo">Beato</span>
+              <h2 class="slide-nome">Carlo Acutis</h2>
+              <p class="slide-frase">"A Eucaristia é a minha auto-estrada para o Céu."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-bg" style="background-image: url('/img/santosImagem/terezinha.jpg');"></div>
+          <div class="slide-conteudo">
+            <div class="slide-imagem">
+              <img src="/img/santosImagem/terezinha.jpg" alt="Santa Teresinha">
+            </div>
+            <div class="slide-divisor"></div>
+            <div class="slide-texto">
+              <span class="slide-subtitulo">Santa</span>
+              <h2 class="slide-nome">Teresinha do Menino Jesus</h2>
+              <p class="slide-frase">"Minha vocação é o amor! No coração da Igreja, serei o amor."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-bg" style="background-image: url('/img/santosImagem/joana.jpg');"></div>
+          <div class="slide-conteudo">
+            <div class="slide-imagem">
+              <img src="/img/santosImagem/joana.jpg" alt="Santa Joana d'Arc">
+            </div>
+            <div class="slide-divisor"></div>
+            <div class="slide-texto">
+              <span class="slide-subtitulo">Santa</span>
+              <h2 class="slide-nome">Joana d'Arc</h2>
+              <p class="slide-frase">"Age, e Deus agirá. Combate, e Deus dará a vitória."</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carrossel-btn prev" id="prev">&#8592;</button>
+      <button class="carrossel-btn next" id="next">&#8594;</button>
+
+      <div class="carrossel-dots" id="dots">
+        <span class="dot ativo" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </div>
+    </section>
+
+
+
+  </main>
+
+
+  <footer class="rodape">
+    <p>&copy; Todos são chamados à santidade</p>
+  </footer>
+
+
+  <script src="/js/script.js"></script>
 </body>
+
 </html>
