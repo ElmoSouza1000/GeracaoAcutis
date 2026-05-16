@@ -4,10 +4,9 @@ body {
     flex-direction: column;
     padding: 0; 
     margin: 0;
-    background-color: rgb(254, 255, 172);
+    background-color: rgb(3, 18, 102);
     font-family: sans-serif; 
 }
-
 
 .cabecalho, .rodape {
     display: flex;
@@ -48,6 +47,7 @@ body {
     grid-template-columns: repeat(3, auto);
     height: auto;
     gap: 10px;
+    padding: 5vh;
 }
 
 .card{
@@ -116,17 +116,17 @@ body {
 #guido{
     background-image: url(/img/santosImagem/guido.jpg);
 }
-.cardInformativo {
-    display: flex;
-    flex-direction: column;
+.sobreNos {
+    align-items: center;
+    justify-content: center;
     color: rgb(3, 18, 102);
     border-radius: 3vh;
-    background: rgba(255, 255, 255, 0.418);
-    margin: 2vh;
-    max-width: 1200px; 
+    background: rgba(255, 255, 255, 0.301);
+    margin: 10vh;
 }
 
 .flexCard {
+    justify-content: space-evenly;
     padding: 5vh;
     display: flex;
     align-items: center;
