@@ -201,14 +201,13 @@ main {
     background-color: rgb(3, 18, 102);
 }
 
-/* Trilha que contém todos os slides lado a lado */
+
 .carrossel-track {
     display: flex;
     height: 100%;
     transition: transform 0.8s ease;
 }
 
-/* Cada slide ocupa 100% da largura */
 .slide {
     min-width: 100%;
     height: 100%;
@@ -219,7 +218,6 @@ main {
     overflow: hidden;
 }
 
-/* Camada azul escura por cima da imagem de fundo */
 .slide::before {
     content: '';
     position: absolute;
@@ -228,7 +226,6 @@ main {
     z-index: 1;
 }
 
-/* Imagem de fundo desfocada */
 .slide-bg {
     position: absolute;
     inset: 0;
@@ -238,10 +235,9 @@ main {
     z-index: 0;
 }
 
-/* Conteúdo visível do slide */
 .slide-conteudo {
     position: relative;
-    z-index: 2;
+    z-index: 2
     display: flex;
     align-items: center;
     justify-content: center;
@@ -253,7 +249,6 @@ main {
     transition: opacity 0.7s ease 0.3s;
 }
 
-/* Quando o slide está ativo, o conteúdo aparece */
 .slide.ativo .slide-conteudo {
     opacity: 1;
 }
@@ -273,7 +268,7 @@ main {
     object-fit: cover;
 }
 
-/* Linha divisória entre imagem e texto */
+
 .slide-divisor {
     width: 2px;
     height: 200px;
@@ -281,7 +276,7 @@ main {
     flex-shrink: 0;
 }
 
-/* Bloco de texto */
+
 .slide-texto {
     max-width: 500px;
     display: flex;
@@ -290,7 +285,7 @@ main {
 }
 
 .slide-nome {
-    font-size: 1.8rem;
+    font-size: 1.8rem
     color: rgb(254, 255, 172);
     letter-spacing: 0.05em;
 }
@@ -311,7 +306,6 @@ main {
     letter-spacing: 0.15em;
 }
 
-/* Botões prev/next */
 .carrossel-btn {
     position: absolute;
     top: 50%;
@@ -335,7 +329,6 @@ main {
 .carrossel-btn.prev { left: 20px; }
 .carrossel-btn.next { right: 20px; }
 
-/* Bolinhas indicadoras */
 .carrossel-dots {
     position: absolute;
     bottom: 20px;
