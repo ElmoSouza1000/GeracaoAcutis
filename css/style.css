@@ -1,31 +1,29 @@
+/* css geral*/
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 0; 
+    padding: 0;
     margin: 0;
     background-color: rgb(3, 18, 102);
-    font-family: sans-serif; 
+    font-family: sans-serif;
 }
 
-.cabecalho, .rodape {
+main {
+    background-color: rgba(255, 255, 255, 0.027);
+    display: block;
+    flex: 1;
+    padding: 0;
+}
+
+.cabecalho,
+.rodape {
     display: flex;
     align-items: center;
     background-color: rgb(3, 18, 102);
     color: white;
     min-height: 15vh;
     width: 100%;
-}
-
-.title h2{
-    display: flex;
-    align-items: center;
-}
-.title img{
-    align-items: center;
-    justify-content: center;
-    width: 10vh;
-    height: auto;
 }
 
 .cabecalho {
@@ -42,7 +40,86 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
-.painel{
+
+.title h2 {
+    display: flex;
+    align-items: center;
+}
+
+.title img {
+    align-items: center;
+    justify-content: center;
+    width: 10vh;
+    height: auto;
+}
+
+/* fim do css geral*/
+
+/*Inicio css about us*/
+.sobreNos {
+    max-width: 70rem;
+    background-color: rgb(3, 18, 102);
+    color: white;
+    margin: 10vh;
+    border-radius: 2vh;
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.linha {
+    border: none;
+    height: 1px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 3vh auto;
+    display: block;
+}
+
+.sobreNos h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2vh;
+}
+
+.tagline {
+    font-style: italic;
+    margin-bottom: 4vh;
+    opacity: 0.9;
+}
+
+.cardConteudo p {
+    margin: 0 auto;
+    max-width: 60rem;
+    justify-content: center;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.mosaico {
+    max-width: 60rem;
+    margin: 5vh auto;
+    border-radius: 2vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.mosaico img {
+    flex: 1 1 auto;
+    height: 12rem;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/*Fim css about us*/
+
+/* incio CSS dos cards */
+.painel {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: auto;
@@ -50,7 +127,8 @@ body {
     padding: 5vh;
 }
 
-.card, .cardHome{
+.card,
+.cardHome {
     margin: 5vh;
     min-height: 300px;
     min-width: 300px;
@@ -69,40 +147,43 @@ body {
     flex-direction: column;
 }
 
-.cardHome h1{
+.cardHome h1 {
     margin-bottom: 0;
     max-width: 100vh;
 }
-.cardHome p{
+
+.cardHome p {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    flex-grow: 1; 
+    flex-grow: 1;
     max-width: 100vh;
 }
-.cardHome a{
+
+.cardHome a {
     margin-bottom: 5vh;
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
-#missa{
+#missa {
     background-image: url(/img/wallpaper/missa.png);
 }
-#terco{
+
+#terco {
     background-image: url(/img/wallpaper/santoTerço.avif);
 }
 
-#agostinho{
+#agostinho {
     background-image: url(/img/santosImagem/agostinho.jpg);
 }
 
-.card h1{
+.card h1 {
     text-align: center;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); 
-    opacity: 0; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    opacity: 0;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -113,89 +194,61 @@ body {
     transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-.card:hover h1{
+.card:hover h1 {
     opacity: 1;
     backdrop-filter: blur(2px);
     background-color: rgba(0, 0, 0, 0.2);
 }
-#juanDiego{
+
+#juanDiego {
     background-image: url(/img/santosImagem/juanDiego.png);
 }
-#terezinha{
+
+#terezinha {
     background-image: url(/img/santosImagem/terezinha.jpg);
 }
-#joseLuiz{
+
+#joseLuiz {
     background-image: url(/img/santosImagem/joseLuiz.jpg);
 }
-#odetinha{
+
+#odetinha {
     background-image: url(/img/santosImagem/odetinha.jpg);
 }
-#joanaDarc{
+
+#joanaDarc {
     background-image: url(/img/santosImagem/joana.jpg);
 }
-#familiaMartin{
+
+#familiaMartin {
     background-image: url(/img/santosImagem/familiaMartin.jpg);
 }
-#gianna{
+
+#gianna {
     background-image: url(/img/santosImagem/gianna.jpg);
 }
-#pastorinhos{
+
+#pastorinhos {
     background-image: url(/img/santosImagem/pastorinhos.jpg);
 }
-#carloAcutis{
-    background-image: url(/img/santosImagem/carlo.webp);
+
+#carloAcutis {
+    background-image: url(/img/santosImagem/carlo/carloInComputer.jpg);
 }
-#chiaraCorbella{
+
+#chiaraCorbella {
     background-image: url(/img/santosImagem/chiara_violino.jpg);
 }
-#guido{
+
+#guido {
     background-image: url(/img/santosImagem/guido.jpg);
 }
-.sobreNos {
-    align-items: center;
-    justify-content: center;
-    color: rgb(3, 18, 102);
-    border-radius: 3vh;
-    background: rgba(255, 255, 255, 0.301);
-    margin: 10vh;
-}
 
-.flexCard {
-    justify-content: space-evenly;
-    padding: 5vh;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+/*fim CSS dos cards */
 
-.cardInformativo h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+/* COMEÇO DO CSS DO CARROSSEL */
 
-.cardConteudo {
-    width: 80vh;
-    text-align: justify;
-    font-size: 1.2rem; 
-    line-height: 1.6;
-}
-
-.cardImagem img {
-    border-radius: 3vh;
-    width: 100%;
-    min-width: 250px;
-    max-width: 350px; 
-    height: auto;
-}
-
-.botaoVoltar {
-    padding: 2vh;
-    text-decoration: none;
-    color: rgb(3, 18, 102);
-    font-size: 3vh;
-}
-
-.container-carrossel{
+.container-carrossel {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -203,31 +256,16 @@ body {
     padding: 40px;
 }
 
-
-
-.texto-santo{
+.texto-santo {
     max-width: 500px;
 }
 
-.texto-santo h1{
+.texto-santo h1 {
     font-size: 50px;
 }
 
-.texto-santo p{
+.texto-santo p {
     font-size: 24px;
-}
-
-main {
-    display: block;
-    flex: 1;
-    padding: 0;
-}
-
-/* COMEÇO DO CSS DO CARROSSEL */
-
-#mHome{
-    padding: 0;
-    display: block;
 }
 
 .carrossel-wrapper {
@@ -237,7 +275,6 @@ main {
     overflow: hidden;
     background-color: rgb(3, 18, 102);
 }
-
 
 .carrossel-track {
     display: flex;
@@ -292,9 +329,9 @@ main {
 
 .slide-imagem {
     flex-shrink: 0;
-    width: 220px;        
-    height: 280px;     
-    border-radius: 2px 40% 2px 40%;  
+    width: 220px;
+    height: 280px;
+    border-radius: 2px 40% 2px 40%;
     overflow: hidden;
     border: 3px solid rgba(254, 255, 172, 0.6);
 }
@@ -363,8 +400,13 @@ main {
     background: rgba(254, 255, 172, 0.25);
 }
 
-.carrossel-btn.prev { left: 20px; }
-.carrossel-btn.next { right: 20px; }
+.carrossel-btn.prev {
+    left: 20px;
+}
+
+.carrossel-btn.next {
+    right: 20px;
+}
 
 .carrossel-dots {
     position: absolute;
