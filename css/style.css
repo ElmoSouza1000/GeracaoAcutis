@@ -170,13 +170,11 @@ main {
 #missa {
     background-image: url(/img/wallpaper/missa.png);
 }
-
+#feSertaneja {
+    background-image: url(/img/wallpaper/franciscoDaSoledade.jpg);
+}
 #terco {
     background-image: url(/img/wallpaper/santoTerço.avif);
-}
-
-#agostinho {
-    background-image: url(/img/santosImagem/agostinho.jpg);
 }
 
 .card h1 {
@@ -245,6 +243,36 @@ main {
 }
 
 /*fim CSS dos cards */
+
+/*card testemunhas no nordeste*/
+#franciscoDaSoledade{
+    background-image: url(/img/testemunhasDaFe/soledade.jpg);
+}
+#benignaCardoso{
+    background-image: url(/img/testemunhasDaFe/beataBenigna.jpeg);
+}
+#irmaDulce{
+    background-image: url(/img/testemunhasDaFe/irmaDulce.jpg);
+}
+#lindalva{
+    background-image: url(/img/testemunhasDaFe/lindalva.png);
+}
+#freiDamiao{
+    background-image: url(/img/testemunhasDaFe/freiDamiao.png);
+}
+#padreIbiapina{
+    background-image: url(/img/testemunhasDaFe/padreIbiapina.jpeg);
+}
+#madrinhaDodo{
+    background-image: url(/img/testemunhasDaFe/madrinhaDodo.webp);
+}
+#martires{
+    background-image: url(/img/testemunhasDaFe/martires.jpeg);
+}
+#padreCicero{
+    background-image: url(/img/testemunhasDaFe/padreCicero.png)
+}
+/*fim deles*/
 
 /* COMEÇO DO CSS DO CARROSSEL */
 
