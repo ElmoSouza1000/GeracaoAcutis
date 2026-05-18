@@ -70,6 +70,7 @@ main {
 
 .container h1 {
     text-align: center;
+    color: rgb(254, 255, 172);
 }
 
 .tagline {
@@ -177,16 +178,17 @@ main {
     overflow: hidden;
     position: relative;
     text-align: center;
-    color: white;
+    color: rgb(254, 255, 172);
     text-decoration: none;
 }
 
 .cardHome h1 {
-    margin-bottom: 0;
+    margin: 5vh 5vh 0 5vh;
     max-width: 100vh;
 }
 
 .cardHome p {
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -197,7 +199,6 @@ main {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-
 .cardHome a {
     margin-bottom: 5vh;
     color: rgb(255, 255, 255);
@@ -205,18 +206,23 @@ main {
 }
 
 #missa {
-    background-image: url(/img/wallpaper/missa.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url(/img/wallpaper/missa.png);
 }
 
 #feSertaneja {
-    background-image: url(/img/wallpaper/franciscoDaSoledade.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url(/img/wallpaper/franciscoDaSoledade.jpg);
 }
 
 #terco {
-    background-image: url(/img/wallpaper/santoTerço.avif);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url(/img/wallpaper/santoTerço.avif);
 }
-#guadalupe{
-    background-image: url(/img/wallpaper/guadalupe.png);
+
+#guadalupe {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url(/img/wallpaper/guadalupe.png);
 }
 
 .card h1 {
@@ -412,8 +418,8 @@ main {
 
 .slide-imagem {
     flex-shrink: 0;
-    width: 220px;
-    height: 280px;
+    width: 320px;
+    height: 380px;
     border-radius: 2px 40% 2px 40%;
     overflow: hidden;
     border: 3px solid rgba(254, 255, 172, 0.6);
