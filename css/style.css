@@ -75,15 +75,29 @@ main {
 
 .tagline {
     text-align: center;
+    margin: 1.5vh 0;
 }
 
-.linha {
+.tagline {
+    text-align: center;
+    margin: 1.5vh 0;
+}
+
+.linha, .linhaComMargem{
     border: none;
     height: 1px;
     width: 90%;
     background-color: rgba(255, 255, 255, 0.15);
-    margin: 3vh auto;
     display: block;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2vh;
+}
+
+.linhaComMargem{
+    margin-bottom: 4vh;
 }
 
 .container h1 {
@@ -136,6 +150,7 @@ main {
 }
 
 .biografia h2 {
+    margin: 0;
     font-size: 2rem;
     text-align: center;
 }
