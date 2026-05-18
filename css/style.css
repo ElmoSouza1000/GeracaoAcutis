@@ -26,6 +26,7 @@ main {
     width: 100%;
 }
 
+
 .cabecalho {
     justify-content: space-evenly;
 }
@@ -56,7 +57,7 @@ main {
 /* fim do css geral*/
 
 /*Inicio css about us*/
-.sobreNos {
+.container {
     max-width: 70rem;
     background-color: rgb(3, 18, 102);
     color: white;
@@ -79,7 +80,7 @@ main {
     display: block;
 }
 
-.sobreNos h1 {
+.container h1 {
     font-size: 2.5rem;
     margin-bottom: 2vh;
 }
@@ -117,6 +118,15 @@ main {
 }
 
 /*Fim css about us*/
+
+/* inciio do css dos nordestino*/
+.img_container img{
+    border-radius: 3vh;
+    width: 50vh;
+    height: 50vh;
+    object-fit: cover;
+}
+/*fim dele*/
 
 /* incio CSS dos cards */
 .painel {
