@@ -7,6 +7,16 @@ body {
     margin: 0;
     background-color: rgb(3, 18, 102);
     font-family: sans-serif;
+    animation-name: aparecer;
+    animation-duration: 200ms;
+}
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 main {
