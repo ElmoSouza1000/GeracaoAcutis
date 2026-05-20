@@ -38,7 +38,14 @@ main {
 }
 
 .cabecalho {
+
     justify-content: space-evenly;
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 0.95;
 }
 
 .rodape {
@@ -432,7 +439,7 @@ main {
     margin: 8vh 5vh 12vh;
     padding: 5rem;
     border-radius: 40px;
-    background-color: rgb(3, 18, 102);
+    background-color: rgb(8, 21, 97);
     overflow: hidden;
     position: relative;
 }
@@ -445,7 +452,6 @@ main {
     background-image: url(/img/santosImagem/papa.jpg);
     background-size: cover;
     background-position: center;
-    filter: blur(6px) brightness(0.4);
     z-index: 0;
 }
 
@@ -457,17 +463,17 @@ main {
 
 .bannerPapa-img img{
     width: 100%;
-    max-width: 420px;
+    max-width: 500px;
     border-radius: 25px;
     object-fit: cover;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    
 }
 
 .bannerPapa-texto{
     flex: 1;
 
     color: white;
-
     z-index: 2;
 }
 
@@ -484,7 +490,7 @@ main {
 .bannerPapa-texto h1{
     margin: 20px 0;
 
-    font-size: clamp(2rem, 4vw, 4rem);
+    font-size: 30px;
 
     line-height: 1.2;
 }
