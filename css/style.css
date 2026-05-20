@@ -117,7 +117,7 @@ main {
 .cardConteudo p {
     max-width: 60rem;
     margin: 0 auto;
-
+    text-indent: 40px;
     text-align: justify;
     line-height: 1.6;
 }
@@ -195,6 +195,8 @@ main {
 
 .biografiaConteudo p {
     max-width: 60rem;
+
+    text-indent: 40px;
 
     text-align: justify;
     line-height: 1.7;
