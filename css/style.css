@@ -6,7 +6,6 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background-color: rgb(3, 18, 102);
     font-family: sans-serif;
     animation: aparecer 200ms;
 }
