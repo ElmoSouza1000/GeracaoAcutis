@@ -11,42 +11,13 @@ body {
     background-color: rgb(3, 18, 102);
 }
 
-
-/*.banner {
-    display: flex;
-    padding: 0px 40px;
-}
-
-.banner-imagem img {
-    width: 100vh;
-}
-
-.banner-texto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    color: white;
-}
-
-.banner-texto h1 {
-    font-size: 2.8rem;
-    line-height: 1.5;
-    font-family: Georgia, serif;
-    font-weight: normal;
-}
-
-#img {
-    max-height: fit-content;
-}*/
-
-.banner{
+.banner {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.banner img{
+.banner img {
     width: 70%;
 }
 
