@@ -11,7 +11,8 @@ body {
     background-color: rgb(3, 18, 102);
 }
 
-.banner {
+
+/*.banner {
     display: flex;
     padding: 0px 40px;
 }
@@ -37,6 +38,16 @@ body {
 
 #img {
     max-height: fit-content;
+}*/
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img{
+    width: 70%;
 }
 
 @keyframes aparecer {
