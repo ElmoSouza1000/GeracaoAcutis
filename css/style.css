@@ -47,7 +47,14 @@ main {
 }
 
 .cabecalho {
+
     justify-content: space-evenly;
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 0.95;
 }
 
 .rodape {
@@ -432,6 +439,104 @@ main {
 }
 
 /* fim CSS dos cards */
+
+/* inicio do CSS do banner do papa */
+
+.bannerPapa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin: 8vh 5vh 12vh;
+    padding: 5rem;
+    border-radius: 40px;
+    background-color: rgb(8, 21, 97);
+    overflow: hidden;
+    position: relative;
+}
+
+
+.bannerPapa::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(/img/santosImagem/papa.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.bannerPapa-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.bannerPapa-img img{
+    width: 100%;
+    max-width: 500px;
+    border-radius: 25px;
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    
+}
+
+.bannerPapa-texto{
+    flex: 1;
+
+    color: white;
+    z-index: 2;
+}
+
+.bannerPapa-texto span{
+    color: rgb(254, 255, 172);
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    font-size: 0.9rem;
+}
+
+.bannerPapa-texto h1{
+    margin: 20px 0;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+}
+
+.bannerPapa-texto p{
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+    opacity: 0.9;
+}
+
+
+@media(max-width: 1000px){
+
+    .bannerPapa{
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 3rem 2rem;
+    }
+
+    .bannerPapa-img img{
+        max-width: 300px;
+    }
+
+    .bannerPapa-texto h1{
+        font-size: 2rem;
+    }
+
+}
+/* fim do CSS do banner do papa */
+
+
 
 
 /* card testemunhas no nordeste */
