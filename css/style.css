@@ -11,6 +11,16 @@ body {
     background-color: rgb(3, 18, 102);
 }
 
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    width: 70%;
+}
+
 @keyframes aparecer {
     0% {
         opacity: 0;
@@ -23,7 +33,6 @@ body {
 
 main {
     flex: 1;
-    padding: 0;
     background-color: rgba(255, 255, 255, 0.027);
 }
 
@@ -197,7 +206,8 @@ main {
 
     object-fit: cover;
 }
-.biografiaImagem p{
+
+.biografiaImagem p {
     text-align: center;
 }
 
@@ -209,23 +219,24 @@ main {
     line-height: 1.7;
 }
 
-.biografiaConteudo a{
+.biografiaConteudo a {
     text-decoration: none;
     color: white;
 }
 
-#diarioSandra{
+#diarioSandra {
     text-align: center;
     text-indent: 0px;
     width: 50vh;
 }
 
-.bloco{
+.bloco {
     font-style: italic;
     align-items: center;
     gap: 20px;
     display: flex;
 }
+
 /* fim dele */
 
 
@@ -331,9 +342,9 @@ main {
         url(/img/wallpaper/guadalupe.png);
 }
 
-#santidade{
+#santidade {
     background-image: url(/img/santosImagem/sandra.jpg);
-} 
+}
 
 .card h1 {
     display: flex;
