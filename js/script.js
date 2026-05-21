@@ -1,6 +1,6 @@
-const track  = document.getElementById('track');
+const track  = document.querySelector('#track');
     const slides = Array.from(track.children);
-    const dots   = Array.from(document.getElementById('dots').children);
+    const dots   = Array.from(document.querySelector('#dots').children);
     let atual = 0;
 
     function irPara(index) {
@@ -12,8 +12,8 @@ const track  = document.getElementById('track');
         track.style.transform = `translateX(-${atual * 100}%)`;
     }
 
-    document.getElementById('next').addEventListener('click', () => irPara(atual + 1));
-    document.getElementById('prev').addEventListener('click', () => irPara(atual - 1));
+    document.querySelector('#next').addEventListener('click', () => irPara(atual + 1));
+    document.querySelector('#prev').addEventListener('click', () => irPara(atual - 1));
 
     dots.forEach(dot => {
         dot.addEventListener('click', () => irPara(Number(dot.dataset.index)));
