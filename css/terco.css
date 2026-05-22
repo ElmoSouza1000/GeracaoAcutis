@@ -1,0 +1,368 @@
+/* Dias da semana ao lado do título do mistério */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    animation: aparecer 200ms;
+    background-color: rgb(3, 18, 102);
+}
+
+.cabecalho,
+.rodape {
+    display: flex;
+    align-items: center;
+    min-height: 15vh;
+    width: 100%;
+    background-color: rgb(3, 18, 102);
+    color: white;
+}
+
+.cabecalho {
+
+    justify-content: space-evenly;
+}
+
+.rodape {
+    justify-content: center;
+}
+
+.navegacao a {
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.title h2 {
+    display: flex;
+    align-items: center;
+}
+
+.title img {
+    width: 10vh;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 70rem;
+
+    margin: 10vh auto;
+    padding: 5vh;
+
+    border-radius: 2vh;
+
+    background-color: rgb(3, 18, 102);
+    color: white;
+}
+
+.container h1 {
+    margin-bottom: 2vh;
+
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(254, 255, 172);
+}
+
+.tagline {
+    margin: 1.5vh 0 4vh;
+
+    text-align: center;
+    font-style: italic;
+
+    opacity: 0.9;
+}
+
+.linha,
+.linhaComMargem {
+    display: block;
+
+    width: 90%;
+    height: 1px;
+
+    border: none;
+
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.linhaComMargem {
+    margin-bottom: 4vh;
+}
+
+
+
+.biografia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 2rem;
+
+    padding: 3rem 0;
+}
+
+.biografia h2 {
+    margin: 0;
+
+    font-size: 2rem;
+    text-align: center;
+}
+
+.biografiaImagem img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 0.5rem;
+
+    object-fit: cover;
+}
+
+
+
+.biografiaConteudo p {
+    max-width: 60rem;
+    text-indent: 40px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.biografiaConteudo a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ── ESTRUTURA DA REZA ── */
+
+.estrutura-reza {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin: 16px 0;
+}
+
+.reza-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid rgba(254, 255, 172, 0.4);
+}
+
+.reza-item.reza-destaque {
+    border-left-color: rgb(254, 255, 172);
+    background: rgba(254, 255, 172, 0.08);
+}
+
+.reza-numero {
+    min-width: 36px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgb(254, 255, 172);
+}
+
+.reza-nome {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+/* ── ABAS ── */
+
+.misterios-abas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 10px;
+}
+
+.aba {
+    padding: 8px 22px;
+    border-radius: 50px;
+    border: 1.5px solid rgba(254, 255, 172, 0.4);
+    background: transparent;
+    color: rgba(254, 255, 172, 0.7);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.aba.ativa {
+    background: rgb(254, 255, 172);
+    color: rgb(3, 18, 102);
+    font-weight: bold;
+    border-color: rgb(254, 255, 172);
+}
+
+.dia-semana {
+    font-size: 0.85rem;
+    color: rgba(254, 255, 172, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+/* ── GRUPOS E SLIDES ── */
+
+.misterio-grupo {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.misterio-grupo.ativo {
+    display: flex;
+}
+
+.misterio-slides {
+    width: 100%;
+}
+
+.misterio-slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 0.4s ease;
+}
+
+.misterio-slide.ativo {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.misterio-slide .biografiaImagem img {
+    width: 100%;
+    max-width: 500px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.misterio-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    max-width: 500px;
+}
+
+.misterio-numero {
+    font-size: 0.85rem;
+    color: rgba(254, 255, 172, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.misterio-info h3 {
+    font-size: 1.4rem;
+    color: rgb(254, 255, 172);
+    margin: 0;
+}
+
+.misterio-info p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin: 0;
+    text-indent: 0;
+    text-align: center;
+}
+
+.reza-contagem {
+    font-size: 0.82rem;
+    color: rgba(254, 255, 172, 0.5);
+    margin-top: 4px;
+}
+
+/* ── NAVEGAÇÃO ── */
+
+.misterio-nav {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.misterio-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(254, 255, 172, 0.4);
+    background: transparent;
+    color: rgb(254, 255, 172);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.misterio-btn:hover {
+    background: rgba(254, 255, 172, 0.15);
+}
+
+/* ── BOTÃO REZAR ── */
+
+.btn-rezar {
+    display: inline-block;
+    margin-top: 36px;
+    padding: 14px 36px;
+    background: rgb(254, 255, 172);
+    color: rgb(3, 18, 102);
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1.5px solid transparent;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-rezar:hover {
+    background: transparent;
+    color: rgb(254, 255, 172);
+    border-color: rgb(254, 255, 172);
+}
+
+/* RESPONSIVO */
+@media (max-width:768px){
+    .misterios-abas {
+        justify-content: center;
+    }
+
+    .aba {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    /* Imagem menor no celular */
+    .misterio-slide .biografiaImagem img {
+        height: 220px;
+    }
+
+    /* Texto menor no celular */
+    .misterio-info h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Estrutura da reza em coluna */
+    .reza-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    /* Botão rezar menor */
+    .btn-rezar {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+}
