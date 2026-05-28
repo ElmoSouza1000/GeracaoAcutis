@@ -62,9 +62,9 @@ main {
 }
 
 /* Título do mistério, preenchido pelo JS */
-.titulo-misterio {
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    color: rgb(254, 255, 172);
+#tituloMisterio {
+    font-size: 30px;
+    color: #fff;
     text-align: center;
     letter-spacing: 0.05em;
 }

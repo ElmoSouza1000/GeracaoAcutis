@@ -18,13 +18,56 @@
         </nav>
     </header>
     <main>
-        <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/57IEMYCJ3N8?si=A4Wz3RtsL1zZajWK"
-                title="YouTube video player" frameborder="0"
+        <h1 id="tituloMisterio">Carregando...</h1>
+
+        <div id="video-gozosos" style="display:none">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/57IEMYCJ3N8?si=n_K59Rn0VvY5ogP3"
+                title="Gozosos" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+
+        <div id="video-luminosos" style="display:none">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yk6a22O2RXw?si=PTolU4GgbqO00nAJ"
+                title="Luminosos" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="video-dolorosos" style="display:none">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aBe2FenKacg?si=slnkK9b3oDIFKr-u"
+                title="Dolorosos" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="video-gloriosos" style="display:none">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BaW18kw0_WA?si=-alR03JBY1_DTFgf"
+                title="Gloriosos" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <a href="/pages/santoTerco.html" class="btn-voltar">← Voltar ao Terço</a>
     </main>
-</body>
+
+ <script>
+        // Pega o ?misterio= da URL
+        var misterio = new URLSearchParams(window.location.search).get('misterio');
+
+        // Títulos
+        var titulos = {
+            gozosos:   "Mistérios Gozosos",
+            luminosos: "Mistérios Luminosos",
+            dolorosos: "Mistérios Dolorosos",
+            gloriosos: "Mistérios Gloriosos"
+        };
+
+        // Se achou o misterio na URL, mostra o título e o vídeo
+        if (misterio && titulos[misterio]) {
+            document.getElementById('tituloMisterio').textContent = titulos[misterio];
+            document.getElementById('video-' + misterio).style.display = 'block';
+        }
+    </script>
 
 </html>
