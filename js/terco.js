@@ -13,6 +13,15 @@ const dias = {
     gloriosos: "Quarta e Domingo"
 };
 
+const linkDosBotoes = {
+    gozosos: "/pages/rezar.html?misterio=gozosos",
+    luminosos: "/pages/rezar.html?misterio=luminosos",
+    dolorosos: "/pages/rezar.html?misterio=dolorosos",
+    gloriosos: "/pages/rezar.html?misterio=gloriosos"
+}
+
+// Define o link do botão para o primeiro grupo (gozosos) por padrão
+document.getElementById('btnRezar').href = linkDosBotoes['gozosos'];
 // Chamada ao clicar < ou >
 // grupo = qual grupo (ex: 'gozosos'), direcao = -1 (voltar) ou 1 (avançar)
 function mudarSlide(grupo, direcao) {
@@ -43,5 +52,8 @@ document.querySelectorAll('.aba').forEach(function(aba) {
 
         // Atualiza o dia da semana
         document.getElementById('diaSemana').textContent = dias[grupo];
+
+        document.getElementById('btnRezar').href = linkDosBotoes[grupo];
+       
     });
 });

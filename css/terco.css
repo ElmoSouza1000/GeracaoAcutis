@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 .estrutura-reza {
     display: flex;
     flex-direction: column;
@@ -23,7 +30,7 @@
 
 .reza-numero {
     min-width: 36px;
-    font-size: 1.1rem;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(254, 255, 172);
 }
@@ -173,7 +180,7 @@
 
 /* ── BOTÃO REZAR ── */
 
-.btn-rezar {
+#btnRezar {
     display: inline-block;
     margin-top: 36px;
     padding: 14px 36px;
@@ -187,7 +194,7 @@
     transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.btn-rezar:hover {
+#btnRezar:hover {
     background: transparent;
     color: rgb(254, 255, 172);
     border-color: rgb(254, 255, 172);

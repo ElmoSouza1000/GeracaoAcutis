@@ -1,127 +1,130 @@
 * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background-color: #000;
-            font-family: sans-serif;
-            animation: aparecer 200ms;
-        }
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    font-family: sans-serif;
+    animation: aparecer 200ms;
+}
 
-      
 
-        /* ── HEADER ── */
-        .cabecalho {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            background-color: rgb(3, 18, 102);
-            color: white;
-            min-height: 15vh;
-            width: 100%;
-        }
 
-        .title h2 {
-            display: flex;
-            align-items: center;
-            color: white;
-            gap: 10px;
-        }
+/* ── HEADER ── */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(3, 18, 102);
+    color: white;
+    min-height: 15vh;
+    width: 100%;
+}
 
-        .title img {
-            width: 10vh;
-            height: auto;
-        }
+.title h2 {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 10px;
+}
 
-        .navegacao a {
-            padding: 15px 30px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: opacity 0.2s;
-        }
+.title img {
+    width: 10vh;
+    height: auto;
+}
 
-        .navegacao a:hover {
-            opacity: 0.7;
-        }
+.navegacao a {
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
 
-        /* ── CONTEÚDO PRINCIPAL ── */
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-            gap: 24px;
-        }
+.navegacao a:hover {
+    opacity: 0.7;
+}
 
-        /* Título do mistério, preenchido pelo JS */
-        .titulo-misterio {
-            font-size: clamp(1.4rem, 3vw, 2rem);
-            color: rgb(254, 255, 172);
-            text-align: center;
-            letter-spacing: 0.05em;
-        }
+/* ── CONTEÚDO PRINCIPAL ── */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 24px;
+}
 
-        /* Container do vídeo — responsivo */
-        .video-wrapper {
-            width: 100%;
-            max-width: 900px;
-            aspect-ratio: 16 / 9; /* mantém proporção do vídeo */
-            border-radius: 12px;
-            overflow: hidden;
-            border: 2px solid rgba(254, 255, 172, 0.3);
-        }
+/* Título do mistério, preenchido pelo JS */
+.titulo-misterio {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: rgb(254, 255, 172);
+    text-align: center;
+    letter-spacing: 0.05em;
+}
 
-        /* iframe ocupa 100% do container */
-        .video-wrapper iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+/* Container do vídeo — responsivo */
+.video-wrapper {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    /* mantém proporção do vídeo */
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(254, 255, 172, 0.3);
+}
 
-        /* Botão de voltar */
-        .btn-voltar {
-            padding: 12px 30px;
-            border-radius: 50px;
-            border: 1.5px solid rgba(254, 255, 172, 0.5);
-            background: transparent;
-            color: rgb(254, 255, 172);
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
+/* iframe ocupa 100% do container */
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
-        .btn-voltar:hover {
-            background: rgba(254, 255, 172, 0.1);
-        }
+/* Botão de voltar */
+.btn-voltar {
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: 1.5px solid rgba(254, 255, 172, 0.5);
+    background: transparent;
+    color: rgb(254, 255, 172);
+    font-size: 0.95rem;
+    text-decoration: none;
 
-        /* ── FOOTER ── */
-        .rodape {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(3, 18, 102);
-            color: white;
-            min-height: 10vh;
-        }
+}
 
-        /* ── RESPONSIVO ── */
-        @media (max-width: 600px) {
-            .cabecalho {
-                flex-direction: column;
-                gap: 10px;
-                padding: 16px;
-                min-height: auto;
-            }
+.btn-voltar:hover {
+    background: rgb(254, 255, 172);
+    color: #000;
 
-            .navegacao a {
-                padding: 8px 16px;
-            }
-        }
+}
+
+/* ── FOOTER ── */
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(3, 18, 102);
+    color: white;
+    min-height: 10vh;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px;
+        min-height: auto;
+    }
+
+    .navegacao a {
+        padding: 8px 16px;
+    }
+}
