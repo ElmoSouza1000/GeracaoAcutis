@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rezar o Terço</title>
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/rezar.css">
-    <link rel="stylesheet" href="/css/style.css">    
 </head>
 
 <body>
@@ -16,8 +16,6 @@
         </div>
         <nav class="navegacao">
             <a href="/index.html">Home</a>
-            <a href="/pages/sobreNos.html">Sobre o site</a>
-
         </nav>
     </header>
     <main>
@@ -51,26 +49,9 @@
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
-        <a href="/pages/santoTerco.html" class="btn-voltar">← Voltar ao Terço</a>
+        <a href="/pages/santoTerco.html" class="btn-voltar">← Voltar</a>
     </main>
-
- <script>
-        // Pega o ?misterio= da URL
-        var misterio = new URLSearchParams(window.location.search).get('misterio');
-
-        // Títulos
-        var titulos = {
-            gozosos:   "Mistérios Gozosos",
-            luminosos: "Mistérios Luminosos",
-            dolorosos: "Mistérios Dolorosos",
-            gloriosos: "Mistérios Gloriosos"
-        };
-
-        // Se achou o misterio na URL, mostra o título e o vídeo
-        if (misterio && titulos[misterio]) {
-            document.getElementById('tituloMisterio').textContent = titulos[misterio];
-            document.getElementById('video-' + misterio).style.display = 'block';
-        }
-    </script>
+    <script src="/js/script.js"></script>
+    <script src="/js/rezar.js"></script>
 
 </html>
