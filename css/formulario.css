@@ -1,0 +1,90 @@
+main {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    padding: 20px;       
+}
+
+.formulario-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0; 
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.abas-form button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.abas-form button.active {
+    color: #4A90E2; 
+    border-bottom: 3px solid #4A90E2;
+}
+
+.form-bloco h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.grupo-campo {
+    margin-bottom: 18px;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+}
+
+.grupo-campo input, 
+.grupo-campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s;
+}
+
+.grupo-campo input:focus, 
+.grupo-campo textarea:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+
+.grupo-campo textarea {
+    resize: vertical;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #357ABD;
+}

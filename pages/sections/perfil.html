@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/paginaPadrao.css">
+    <link rel="stylesheet" href="/css/formulario.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="title">
+            <h2>Geração Acutis <img src="/img/icons/vaticanoFlag.png" alt=""></h2>
+        </div>
+        <nav class="navegacao">
+            <a href="/index.html">Home</a>
+        </nav>
+    </header>
+        <main>
+            <div class="formulario-container">
+                <form id="form-cadastro" class="form-bloco">
+                    <h3>Criar Conta</h3>
+
+                    <div class="grupo-campo">
+                        <label for="cad-nome">Nome Completo</label>
+                        <input type="text" id="cad-nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="cad-email">E-mail</label>
+                        <input type="email" id="cad-email" name="email" placeholder="exemplo@email.com" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="cad-senha">Senha</label>
+                        <input type="password" id="cad-senha" name="senha" placeholder="Crie uma senha" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="cad-movimento">Participa de algum grupo/movimento católico?</label>
+                        <textarea id="cad-movimento" name="movimento_catolico" rows="3"
+                            placeholder="Se sim, qual? Se não, pode deixar em branco."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Cadastrar</button>
+                </form>
+            </div>
+        </main>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <p>Site desenvolvido na disciplina de Introdução à Tecnologia Web</p>
+            <p>© Curso de --------------------------</p>
+            <p>Nome: - <a href="#">Conta do Github</a></p>
+        </div>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
