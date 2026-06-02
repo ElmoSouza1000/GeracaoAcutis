@@ -11,6 +11,8 @@ body {
     flex-direction: column;
     font-family: sans-serif;
     background-color: rgb(3, 18, 102);
+    animation-name: aparecer;
+    animation-duration: 200ms;
 }
 
 @keyframes aparecer {
@@ -28,7 +30,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 60px;
-    min-height: 15vh;
+    min-height: 10vh;
     width: 100%;
     background-color: rgb(3, 18, 102);
     color: white;
@@ -57,12 +59,10 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: opacity 0.2s;
 }
 
 .navegacao a:hover {
-    color: gold;
-    opacity: 0.7;
+    color:rgb(254, 255, 172);
 }
 
 /*fim*/
@@ -72,6 +72,50 @@ main {
     background-color: rgba(255, 255, 255, 0.027);
 }
 
+
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    width: 100%;
+    background-color: rgb(3, 18, 102);
+    color: white;
+}
+
+.rodape-conteudo {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.rodape-conteudo p {
+    margin: 0;
+}
+
+.rodape-conteudo a {
+    color: rgb(254, 255, 172);
+    text-decoration: none;
+}
+
+.rodape-conteudo a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px;
+        min-height: auto;
+    }
+
+    .navegacao a {
+        padding: 8px 16px;
+    }
+}
 /* Botão de voltar */
 .btn-voltar {
     padding: 12px 30px;
@@ -394,36 +438,4 @@ main {
     text-align: center;
     font-size: 2.5rem;
     color: rgb(254, 255, 172);
-}
-
-.rodape {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 15vh;
-    width: 100%;
-    background-color: rgb(3, 18, 102);
-    color: white;
-}
-
-.rodape-conteudo {
-    text-align: center;
-    line-height: 1.8;
-    font-size: 0.9rem;
-    opacity: 0.85;
-}
-
-.rodape-conteudo p {
-    margin: 0;
-}
-
-.rodape-conteudo a {
-    color: rgb(254, 255, 172);
-    text-decoration: none;
-    transition: opacity 0.2s;
-}
-
-.rodape-conteudo a:hover {
-    opacity: 0.7;
-    text-decoration: underline;
 }

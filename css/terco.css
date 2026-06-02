@@ -34,7 +34,7 @@
     color: rgba(255, 255, 255, 0.88);
 }
 
-/* ── ABAS ── */
+/* abas */
 
 .misterios-abas {
     display: flex;
@@ -69,7 +69,7 @@
     margin-bottom: 20px;
 }
 
-/* ── GRUPOS E SLIDES ── */
+/* misterios */
 
 .misterio-grupo {
     display: none;
@@ -147,7 +147,7 @@
     margin-top: 4px;
 }
 
-/* ── NAVEGAÇÃO ── */
+/* nav */
 
 .misterio-nav {
     display: flex;
@@ -171,7 +171,7 @@
     background: rgba(254, 255, 172, 0.15);
 }
 
-/* ── BOTÃO REZAR ── */
+/* botao */
 
 #btnRezar {
     display: inline-block;
@@ -193,7 +193,7 @@
     border-color: rgb(254, 255, 172);
 }
 
-/* RESPONSIVO */
+
 @media (max-width:768px){
     .misterios-abas {
         justify-content: center;
@@ -204,24 +204,20 @@
         font-size: 0.85rem;
     }
 
-    /* Imagem menor no celular */
     .misterio-slide .biografiaImagem img {
         height: 220px;
     }
 
-    /* Texto menor no celular */
     .misterio-info h3 {
         font-size: 1.1rem;
     }
 
-    /* Estrutura da reza em coluna */
     .reza-item {
         flex-direction: column;
         align-items: flex-start;
         gap: 4px;
     }
 
-    /* Botão rezar menor */
     .btn-rezar {
         padding: 12px 24px;
         font-size: 0.9rem;
