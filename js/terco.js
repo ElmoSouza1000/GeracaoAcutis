@@ -5,7 +5,6 @@ const slideAtual = {
     gloriosos: 0
 };
 
-// Map para os dias da semana — chave: grupo, valor: dia
 const dias = new Map([
     ['gozosos',   'Segunda e Sábado'],
     ['luminosos', 'Quinta-feira'],
@@ -13,7 +12,6 @@ const dias = new Map([
     ['gloriosos', 'Quarta e Domingo']
 ]);
 
-// Map para os links dos botões
 const linkDosBotoes = new Map([
     ['gozosos',   '/pages/rezar.html?misterio=gozosos'],
     ['luminosos', '/pages/rezar.html?misterio=luminosos'],
@@ -21,7 +19,6 @@ const linkDosBotoes = new Map([
     ['gloriosos', '/pages/rezar.html?misterio=gloriosos']
 ]);
 
-// querySelector substitui getElementById
 document.querySelector('#btnRezar').href = linkDosBotoes.get('gozosos');
 
 function mudarSlide(grupo, direcao) {
@@ -31,17 +28,15 @@ function mudarSlide(grupo, direcao) {
     slides[slideAtual[grupo]].classList.add('ativo');
 }
 
-// querySelectorAll retorna uma NodeList — usamos map para percorrer
 Array.from(document.querySelectorAll('.aba')).map(function(aba) {
     aba.addEventListener('click', function() {
         const grupo = this.dataset.grupo;
 
-        // map para remover 'ativa' de todas as abas
         Array.from(document.querySelectorAll('.aba')).map(function(a) {
             a.classList.remove('ativa');
         });
 
-        // map para remover 'ativo' de todos os grupos
+       
         Array.from(document.querySelectorAll('.misterio-grupo')).map(function(g) {
             g.classList.remove('ativo');
         });
@@ -49,7 +44,6 @@ Array.from(document.querySelectorAll('.aba')).map(function(aba) {
         this.classList.add('ativa');
         document.querySelector('#' + grupo).classList.add('ativo');
 
-        // .get() para buscar o valor no Map
         document.querySelector('#diaSemana').textContent = dias.get(grupo);
         document.querySelector('#btnRezar').href = linkDosBotoes.get(grupo);
     });
