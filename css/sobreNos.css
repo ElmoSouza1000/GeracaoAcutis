@@ -9,23 +9,17 @@
 .mosaico {
     display: flex;
     justify-content: center;
-
     max-width: 60rem;
-
     margin: 5vh auto;
-
     overflow: hidden;
     border-radius: 2vh;
-
     gap: 0;
 }
 
 .mosaico img {
     flex: 1 1 auto;
-
     width: auto;
     height: 12rem;
-
     object-fit: contain;
 }
 

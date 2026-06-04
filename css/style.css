@@ -62,7 +62,7 @@ body {
 }
 
 .navegacao a:hover {
-    color:rgb(254, 255, 172);
+    color: rgb(254, 255, 172);
 }
 
 /*fim*/
@@ -111,24 +111,24 @@ main {
     border: 1.5px solid rgba(254, 255, 172, 0.5);
     background: transparent;
     color: rgb(254, 255, 172);
-    font-size: 0.95rem;
+    font-weight: bold;
+    font-size: 1rem;
     text-decoration: none;
-
 }
 
 .btn-voltar:hover {
     background: rgb(254, 255, 172);
-    color: #000;
+    color: rgb(3, 18, 102);
 
 }
 
 /*carrossel da home*/
-.container-carrossel {
+.containerCarrossel {
     display: flex;
     padding: 40px;
 }
 
-.carrossel-wrapper {
+.carrosselWrapper {
     position: relative;
     width: 100%;
     height: 90vh;
@@ -136,7 +136,7 @@ main {
     background-color: rgb(3, 18, 102);
 }
 
-.carrossel-track {
+.carrosselTrack {
     display: flex;
     height: 100%;
     transition: transform 0.8s ease;
@@ -148,7 +148,6 @@ main {
     height: 100%;
 }
 
-/* Camada de cor sobre a imagem */
 .slide::before {
     content: '';
     position: absolute;
@@ -157,8 +156,7 @@ main {
     z-index: 1;
 }
 
-/* Imagem de fundo borrada */
-.slide-bg {
+.slideBg {
     position: absolute;
     inset: 0;
     background-size: cover;
@@ -167,7 +165,7 @@ main {
     z-index: 0;
 }
 
-.slide-conteudo {
+.slideConteudo {
     position: relative;
     z-index: 2;
     display: flex;
@@ -183,11 +181,11 @@ main {
     transition: opacity 0.7s ease 0.3s;
 }
 
-.slide.ativo .slide-conteudo {
+.slide.ativo .slideConteudo {
     opacity: 1;
 }
 
-.slide-imagem {
+.slideImagem {
     flex-shrink: 0;
     width: 320px;
     height: 380px;
@@ -196,33 +194,33 @@ main {
     border: 3px solid rgba(254, 255, 172, 0.6);
 }
 
-.slide-imagem img {
+.slideImagem img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.slide-divisor {
+.slideDivisor {
     flex-shrink: 0;
     width: 2px;
     height: 200px;
     background: linear-gradient(to bottom, transparent, rgba(254, 255, 172, 0.8), transparent);
 }
 
-.slide-texto {
+.slideTexto {
     display: flex;
     flex-direction: column;
     max-width: 500px;
     gap: 16px;
 }
 
-.slide-nome {
+.slideNome {
     font-size: 1.8rem;
     letter-spacing: 0.05em;
     color: rgb(254, 255, 172);
 }
 
-.slide-frase {
+.slideFrase {
     padding-left: 18px;
     border-left: 3px solid rgba(254, 255, 172, 0.7);
     font-style: italic;
@@ -231,14 +229,14 @@ main {
     color: rgba(255, 255, 255, 0.88);
 }
 
-.slide-subtitulo {
+.slideSubtitulo {
     font-size: 0.9em;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: rgba(254, 255, 172, 0.6);
 }
 
-.carrossel-btn {
+.carrosselBtn {
     position: absolute;
     top: 50%;
     width: 48px;
@@ -254,14 +252,19 @@ main {
     transition: background 0.3s;
 }
 
-.carrossel-btn:hover {
+.carrosselBtn:hover {
     background: rgba(254, 255, 172, 0.25);
 }
 
-.carrossel-btn.prev { left: 20px; }
-.carrossel-btn.next { right: 20px; }
+.carrosselBtn.prev {
+    left: 20px;
+}
 
-.carrossel-dots {
+.carrosselBtn.next {
+    right: 20px;
+}
+
+.carrosselDots {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -313,22 +316,17 @@ main {
 /*linha de separação geral*/
 .tagline {
     margin: 1.5vh 0 4vh;
-
     text-align: center;
     font-style: italic;
-
     opacity: 0.9;
 }
 
 .linha,
 .linhaComMargem {
     display: block;
-
     width: 90%;
     height: 1px;
-
     border: none;
-
     background-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -342,21 +340,16 @@ main {
 .container {
     display: flex;
     flex-direction: column;
-
     max-width: 70rem;
-
     margin: 10vh auto;
     padding: 5vh;
-
     border-radius: 2vh;
-
     background-color: rgb(3, 18, 102);
     color: white;
 }
 
 .container h1 {
     margin-bottom: 2vh;
-
     text-align: center;
     font-size: 2.5rem;
     color: rgb(254, 255, 172);

@@ -20,37 +20,32 @@
         </nav>
     </header>
     <main>
-        <div class="formulario-container">
-            <form id="form-cadastro" class="form-bloco">
+        <div class="formularioContainer">
+            <form id="formLogin" class="formBloco">
                 <h3>Login</h3>
-
-                <div class="grupo-campo">
-                    <label for="cad-email">E-mail</label>
-                    <input type="email" id="cad-email" name="email" placeholder="exemplo@email.com" required>
+                <div class="grupoCampo">
+                    <label for="loginEmail">E-mail</label>
+                    <input type="email" id="loginEmail" name="email" placeholder="exemplo@email.com" required>
                 </div>
 
-                <div class="grupo-campo">
-                    <label for="cad-senha">Senha</label>
-                    <input type="password" id="cad-senha" name="senha" placeholder="Crie uma senha" required>
+                <div class="grupoCampo">
+                    <label for="loginSenha">Senha</label>
+                    <input type="password" id="loginSenha" name="senha" placeholder="Digite sua senha" required>
                 </div>
 
-                <div class="grupo-campo">
-                    <label for="">Não possui conta? <a href="/pages/sections/perfil.html">cadastre-se aqui</a><br></label>
-                    <button type="submit" class="btn-enviar">Entrar</button>
+                <div class="grupoCampo">
+                    <label>Não possui conta? <a href="/pages/formularios/cadastro.html">Cadastre-se aqui</a></label>
                 </div>
-
+                <button type="submit" class="btnEnviar">Entrar</button>
             </form>
         </div>
     </main>
-
     <footer class="rodape">
         <div class="rodape-conteudo">
             <p>Site desenvolvido na disciplina de Introdução à Tecnologia Web</p>
-            <p>© Curso de --------------------------</p>
-            <p>Nome: - <a href="#">Conta do Github</a></p>
+            <p>&copy; Curso de --------------------------</p>
         </div>
     </footer>
     <script src="/js/script.js"></script>
 </body>
-
 </html>

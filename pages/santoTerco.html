@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Santo Terço</title>
+    <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/paginaPadrao.css">
     <link rel="stylesheet" href="/css/terco.css">
@@ -153,10 +153,7 @@
 
                 </div>
             </article>
-
             <hr class="linha">
-            <!-- MISTÉRIOS -->
-            <!-- CARROSSEL DOS MISTÉRIOS -->
             <article class="layout">
                 <h2>Os Mistérios do Rosário</h2>
 
@@ -177,7 +174,6 @@
 
                 <p class="dia-semana" id="diaSemana">Segunda e Sábado</p>
 
-                <!-- ===== GOZOSOS ===== -->
                 <div class="misterio-grupo ativo" id="gozosos">
                     <div class="misterio-slides">
 
@@ -232,12 +228,10 @@
 
                     </div>
                     <div class="misterio-nav">
-                        <button class="misterio-btn" onclick="mudarSlide('gozosos', -1)"> &lt; </button>
-                        <button class="misterio-btn" onclick="mudarSlide('gozosos', 1)"> &gt; </button>
+                        <button class="misterio-btn" data-grupo="gozosos" data-direcao="-1">&lt;</button>
+                        <button class="misterio-btn" data-grupo="gozosos" data-direcao="1">&gt;</button>
                     </div>
                 </div>
-
-                <!-- ===== LUMINOSOS ===== -->
                 <div class="misterio-grupo" id="luminosos">
                     <div class="misterio-slides">
 
@@ -294,12 +288,10 @@
 
                     </div>
                     <div class="misterio-nav">
-                        <button class="misterio-btn" onclick="mudarSlide('luminosos', -1)"> &lt; </button>
-                        <button class="misterio-btn" onclick="mudarSlide('luminosos', 1)"> &gt; </button>
+                        <button class="misterio-btn" data-grupo="luminosos" data-direcao="-1">&lt;</button>
+                        <button class="misterio-btn" data-grupo="luminosos" data-direcao="1">&gt;</button>
                     </div>
                 </div>
-
-                <!-- ===== DOLOROSOS ===== -->
                 <div class="misterio-grupo" id="dolorosos">
                     <div class="misterio-slides">
 
@@ -354,17 +346,13 @@
 
                     </div>
                     <div class="misterio-nav">
-                        <button class="misterio-btn" onclick="mudarSlide('dolorosos', -1)"> &lt; </button>
-                        <button class="misterio-btn" onclick="mudarSlide('dolorosos', 1)"> &gt; </button>
+                        <button class="misterio-btn" data-grupo="dolorosos" data-direcao="-1">&lt;</button>
+                        <button class="misterio-btn" data-grupo="dolorosos" data-direcao="1">&gt;</button>
                     </div>
                 </div>
-
-                <!-- ===== GLORIOSOS ===== -->
                 <div class="misterio-grupo" id="gloriosos">
                     <div class="misterio-slides">
-
                         <div class="misterio-slide ativo">
-
                             <div class="misterio-info">
                                 <span class="misterio-numero">1º Mistério Glorioso</span>
                                 <h3>A Ressurreição</h3>
@@ -414,32 +402,21 @@
 
                     </div>
                     <div class="misterio-nav">
-                        <button class="misterio-btn" onclick="mudarSlide('gloriosos', -1)"> &lt; </button>
-                        <button class="misterio-btn" onclick="mudarSlide('gloriosos', 1)"> &gt; </button>
+                        <button class="misterio-btn" data-grupo="gloriosos" data-direcao="-1">&lt;</button>
+                        <button class="misterio-btn" data-grupo="gloriosos" data-direcao="1">&gt;</button>
                     </div>
                 </div>
-
-                <a href="/pages/rezar.html?misterio=gozosos" id="btnRezar">
-                    Clique aqui e reze conosco
-                </a>
+                <a href="/pages/rezar.html?misterio=gozosos" id="btnRezar">Clique aqui e reze conosco</a>
             </article>
-
         </section>
     </main>
-
-
     <footer class="rodape">
         <div class="rodape-conteudo">
             <p>Site desenvolvido na disciplina de Introdução à Tecnologia Web</p>
-            <p>© Curso de --------------------------</p>
-            <p>Nome: - <a href="#">Conta do Github</a></p>
+            <p>&copy; Curso de --------------------------</p>
         </div>
     </footer>
     <script src="/js/script.js"></script>
+    <script src="/js/terco.js"></script>
 </body>
-
-<script src="/js/terco.js"></script>
-
-</body>
-
 </html>
