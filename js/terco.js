@@ -1,50 +1,74 @@
-const slideAtual = {
-    gozosos:   0,
-    luminosos: 0,
-    dolorosos: 0,
-    gloriosos: 0
-};
+document.addEventListener("DOMContentLoaded", () => {
+    const abas = [...document.querySelectorAll(".aba")];
+    const grupos = [...document.querySelectorAll(".misterioGrupo")];
+    const diaSemanaTexto = document.getElementById("diaSemana");
+    const btnRezar = document.getElementById("btnRezar");
+    
+    const diasPorGrupo = {
+        gozosos: "Segunda e Sábado",
+        luminosos: "Quinta-feira",
+        dolorosos: "Terça e Sexta-feira",
+        gloriosos: "Quarta e Domingo"
+    };
 
-const dias = new Map([
-    ['gozosos',   'Segunda e Sábado'],
-    ['luminosos', 'Quinta-feira'],
-    ['dolorosos', 'Terça e Sexta-feira'],
-    ['gloriosos', 'Quarta e Domingo']
-]);
-
-const linkDosBotoes = new Map([
-    ['gozosos',   '/pages/rezar.html?misterio=gozosos'],
-    ['luminosos', '/pages/rezar.html?misterio=luminosos'],
-    ['dolorosos', '/pages/rezar.html?misterio=dolorosos'],
-    ['gloriosos', '/pages/rezar.html?misterio=gloriosos']
-]);
-
-document.querySelector('#btnRezar').href = linkDosBotoes.get('gozosos');
-
-function mudarSlide(grupo, direcao) {
-    const slides = document.querySelectorAll('#' + grupo + ' .misterio-slide');
-    slides[slideAtual[grupo]].classList.remove('ativo');
-    slideAtual[grupo] = (slideAtual[grupo] + direcao + slides.length) % slides.length;
-    slides[slideAtual[grupo]].classList.add('ativo');
-}
-
-Array.from(document.querySelectorAll('.aba')).map(function(aba) {
-    aba.addEventListener('click', function() {
-        const grupo = this.dataset.grupo;
-
-        Array.from(document.querySelectorAll('.aba')).map(function(a) {
-            a.classList.remove('ativa');
+    abas.map(aba => {
+        aba.addEventListener("click", () => {
+            const grupoAlvo = aba.getAttribute("data-grupo");
+            abas.map(a => a.classList.remove("ativa"));
+            aba.classList.add("ativa");
+            grupos.map(grupo => {
+                if (grupo.id === grupoAlvo) {
+                    grupo.classList.add("ativo");
+                    mostrarSlide(grupo, 0);
+                } else {
+                    grupo.classList.remove("ativo");
+                }
+            });
+            if (diasPorGrupo[grupoAlvo]) {
+                diaSemanaTexto.textContent = diasPorGrupo[grupoAlvo];
+            }
+            if (btnRezar) {
+                btnRezar.setAttribute("href", `/pages/rezar.html?misterio=${grupoAlvo}`);
+            }
         });
-
-       
-        Array.from(document.querySelectorAll('.misterio-grupo')).map(function(g) {
-            g.classList.remove('ativo');
-        });
-
-        this.classList.add('ativa');
-        document.querySelector('#' + grupo).classList.add('ativo');
-
-        document.querySelector('#diaSemana').textContent = dias.get(grupo);
-        document.querySelector('#btnRezar').href = linkDosBotoes.get(grupo);
     });
+
+    const botoesNav = [...document.querySelectorAll(".misterioBtn")];
+    botoesNav.map(botao => {
+        botao.addEventListener("click", () => {
+            const grupoId = botao.getAttribute("data-grupo");
+            const direcao = parseInt(botao.getAttribute("data-direcao"), 10);
+            const grupoElemento = document.getElementById(grupoId);
+
+            if (!grupoElemento) return;
+
+            const slides = [...grupoElemento.querySelectorAll(".misterioSlide")];
+            let indiceAtivo = -1;
+
+            slides.map((slide, index) => {
+                if (slide.classList.contains("ativo")) {
+                    indiceAtivo = index;
+                }
+            });
+
+            let novoIndice = indiceAtivo + direcao;
+            if (novoIndice >= slides.length) {
+                novoIndice = 0;
+            } else if (novoIndice < 0) {
+                novoIndice = slides.length - 1;
+            }
+            mostrarSlide(grupoElemento, novoIndice);
+        });
+    });
+
+    function mostrarSlide(grupoElemento, indiceAlvo) {
+        const slides = [...grupoElemento.querySelectorAll(".misterioSlide")];
+        slides.map((slide, index) => {
+            if (index === indiceAlvo) {
+                slide.classList.add("ativo");
+            } else {
+                slide.classList.remove("ativo");
+            }
+        });
+    }
 });
