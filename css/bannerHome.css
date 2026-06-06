@@ -1,6 +1,6 @@
 .bannerComunidades {
-    height: 80vh;
-    background-image: url("/img/wallpaper/Jesus_wallpaper.png");
+    height: 100vh;
+    background-image: url("/img/wallpaper/ceu.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -14,7 +14,6 @@
     content: "";
     position: absolute;
     inset: 0;
-
     backdrop-filter: blur(8px);
     background: rgba(0, 0, 0, 0.45);
 }
@@ -37,3 +36,7 @@
     margin: 0;
 }
 
+.bannerComunidades a{
+    width: 30%;
+    text-decoration: none;
+}
