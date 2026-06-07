@@ -1,7 +1,5 @@
-const btnEntrar = document.querySelector("#btnLogin");
-
-btnEntrar.addEventListener("click", (event) => {
+const logar = document.querySelector("#btnLogin");
+logar.addEventListener("click", (event) => {
     event.preventDefault();
-    window.location.href ="../comunidades.html";
-
-});
+    window.location.href = "../comunidades.html";
+})
