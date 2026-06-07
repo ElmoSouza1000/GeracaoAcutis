@@ -9,6 +9,6 @@ btnCadastrar.addEventListener("click", (event) =>{
         mensagemErro.textContent = "As senhas não coincidem!";
         return;
     } else{
-            window.location.href = "../comunidades.html";
+            window.location.href = "../perfil.html";
     }
 })
