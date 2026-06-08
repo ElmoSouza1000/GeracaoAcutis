@@ -1,0 +1,76 @@
+.perfilBanner {
+    height: 200px;
+    background: url(/img/wallpaper/yourName.jpg);
+}
+
+.perfilConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -75px;
+}
+
+.fotoPerfil img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.infoPerfil {
+    text-align: center;
+}
+
+.infoPerfil h2 {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.frasePerfil {
+    max-width: 550px;
+    color: #c5c5c5;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+ .atalhosPerfil {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 30px;
+}
+
+.cardAtalho {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#16247e;
+    border:1px solid rgba(255,230,140,.2);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+}
+.cardAtalho p{
+    color: #c5c5c5;
+}
+.cardAtalho:hover {
+    transition-duration: 200ms;
+    transform: translateX(2px);
+}
+
+.btnAcessar {
+    background-color: #0B4EA2;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    transition: 200ms;
+}
+
+.btnAcessar:hover {
+    background-color: #357ABD;
+}
