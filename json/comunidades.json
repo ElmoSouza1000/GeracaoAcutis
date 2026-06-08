@@ -3,126 +3,126 @@
         "tipo": "Carisma",
         "nome": "Franciscano",
         "descricao": "Espiritualidade baseada na simplicidade, fraternidade e amor à criação.",
-        "imagem": "/img/comunidades/franciscanos.jpg",
+        "imagem": "../img/comunidades/franciscanos.jpg",
         "link": "#"
     },
     {
         "tipo": "Carisma",
         "nome": "Agostiniano",
         "descricao": "Espiritualidade baseada na simplicidade, fraternidade e amor à criação.",
-        "imagem": "/img/comunidades/franciscanos.jpg",
+        "imagem": "../img/comunidades/agostiniano.png",
         "link": "#"
     },
     {
         "tipo": "Carisma",
         "nome": "Beneditino",
         "descricao": "Espiritualidade baseada na simplicidade, fraternidade e amor à criação.",
-        "imagem": "/img/comunidades/franciscanos.jpg",
+        "imagem": "../img/comunidades/beneditinos.jpeg",
         "link": "#"
     },
     {
         "tipo": "Carisma",
         "nome": "Salesiano",
         "descricao": "Evangelização e educação dos jovens segundo Dom Bosco.",
-        "imagem": "img/salesianos.jpg",
+        "imagem": "../img/comunidades/salesianos.jpg",
         "link": "#"
     },
     {
         "tipo": "Carisma",
         "nome": "Jesuíta",
         "descricao": "Discernimento espiritual e formação intelectual.",
-        "imagem": "img/jesuitas.jpg",
+        "imagem": "../img/comunidades/jesuitas.jpeg",
         "link": "#"
     },
     {
         "tipo": "Carisma",
         "nome": "Dominicano",
         "descricao": "Pregação e busca da verdade através do estudo.",
-        "imagem": "img/dominicanos.jpg",
+        "imagem": "../img/comunidades/dominicanos.jpeg",
         "link": "#"
     },
     {
         "tipo": "Carisma",
         "nome": "Carmelita",
         "descricao": "Vida interior profunda e intimidade com Deus.",
-        "imagem": "img/carmelitas.jpg",
+        "imagem": "../img/comunidades/carmelitas.webp",
         "link": "#"
     },
     {
         "tipo": "Carisma",
         "nome": "Ursulino",
         "descricao": "Espiritualidade baseada na simplicidade, fraternidade e amor à criação.",
-        "imagem": "/img/comunidades/franciscanos.jpg",
+        "imagem": "../img/comunidades/ursulinas.png",
         "link": "#"
     },
     {
         "tipo": "Movimento",
         "nome": "Vicentinos",
         "descricao": "Serviço aos pobres inspirado por São Vicente de Paulo.",
-        "imagem": "/img/comunidades/vicentinos.jpg",
+        "imagem": "../img/comunidades/vicentinos.jpg",
         "link": "#"
     },
     {
         "tipo": "Movimento",
         "nome": "Renovação Carismática",
         "descricao": "Experiência do Batismo no Espírito Santo e evangelização.",
-        "imagem": "img/rcc.jpg",
+        "imagem": "../img/comunidades/renovação carismática.jpeg",
         "link": "#"
     },
     {
         "tipo": "Movimento",
         "nome": "Focolares",
         "descricao": "Espiritualidade da unidade e fraternidade universal.",
-        "imagem": "img/focolares.jpg",
+        "imagem": "../img/comunidades/focolares.jpeg",
         "link": "#"
     },
     {
         "tipo": "Movimento",
         "nome": "Apostolado da Oração",
         "descricao": "União diária ao Coração de Jesus pela oração e oferecimento.",
-        "imagem": "img/apostolado.jpg",
+        "imagem": "../img/comunidades/apostolado da oração.jpeg",
         "link": "#"
     },
     {
         "tipo": "Espiritualidade",
         "nome": "Consagração Mariana",
         "descricao": "Entrega total a Jesus pelas mãos da Virgem Maria.",
-        "imagem": "img/consagracao.jpg",
+        "imagem": "../img/comunidades/congressão mariana.jpg",
         "link": "#"
     },
     {
         "tipo": "Devoção",
         "nome": "Divina Misericórdia",
         "descricao": "Confiança ilimitada na misericórdia de Jesus.",
-        "imagem": "img/divinamisericordia.jpg",
+        "imagem": "../img/comunidades/divina misericordia.jpg",
         "link": "#"
     },
     {
         "tipo": "Devoção",
         "nome": "Sagrado Coração de Jesus",
         "descricao": "Devoção ao amor misericordioso de Cristo por toda a humanidade.",
-        "imagem": "img/sagradocoracao.jpg",
+        "imagem": "../img/comunidades/sagrado coração.jpeg",
         "link": "#"
     },
     {
         "tipo": "Devoção",
         "nome": "Imaculado Coração de Maria",
         "descricao": "Devoção ao amor misericordioso de Cristo por toda a humanidade.",
-        "imagem": "img/sagradocoracao.jpg",
+        "imagem": "../img/comunidades/imaculado coração de maria.jpg",
         "link": "#"
     },
     {
         "tipo": "Devoção",
         "nome": "Agonia de Cristo",
         "descricao": "Adoração à Jesus Eucarístico.",
-        "imagem": "img/divinamisericordia.jpg",
+        "imagem": "../img/comunidades/agonia de cristo.jpg",
         "link": "#"
     },
     {
         "tipo": "Devoção",
         "nome": "Sagrada Face",
         "descricao": "Devoção ao amor misericordioso de Cristo por toda a humanidade.",
-        "imagem": "img/sagradocoracao.jpg",
+        "imagem": "../img/comunidades/sagrada face.webp",
         "link": "#"
     }
 ]
