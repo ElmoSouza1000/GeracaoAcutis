@@ -8,10 +8,10 @@
 
 .cardComunidade{
     overflow: hidden;
-    background:#16247e;
+    background-color:#16247e;
     border-radius:25px ;
     border:1px solid rgba(255,230,140,.2);
-    transition: 0.1s;
+    transition: 200ms;
 }
 
 .cardComunidade:hover{

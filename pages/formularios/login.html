@@ -30,13 +30,13 @@
 
                 <div class="grupoCampo">
                     <label for="loginSenha">Senha</label>
-                    <input type="password" id="loginSenha" name="senha" placeholder="Digite sua senha" required>
+                    <input type="password" minlength="8" id="loginSenha" name="senha" placeholder="Digite sua senha" required>
                 </div>
 
                 <div class="grupoCampo">
                     <label>Não possui conta? <a href="/pages/formularios/cadastro.html">Cadastre-se aqui</a></label>
                 </div>
-                <button type="submit" class="btnEnviar">Entrar</button>
+                <button id="btnLogin" type="submit" class="btnEnviar">Entrar</button>
             </form>
         </div>
     </main>
@@ -46,6 +46,6 @@
             <p>&copy; Curso de --------------------------</p>
         </div>
     </footer>
-    <script src="/js/script.js"></script>
+    <script src="/js/login.js"></script>
 </body>
 </html>
