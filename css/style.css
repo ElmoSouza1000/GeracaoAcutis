@@ -73,36 +73,6 @@ main {
 }
 
 
-.rodape {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 10vh;
-    width: 100%;
-    background-color: rgb(3, 18, 102);
-    color: white;
-}
-
-.rodapeConteudo {
-    text-align: center;
-    line-height: 1.8;
-    font-size: 0.9rem;
-    opacity: 0.85;
-}
-
-.rodapeConteudo p {
-    margin: 0;
-}
-
-.rodapeConteudo a {
-    color: rgb(254, 255, 172);
-    text-decoration: none;
-}
-
-.rodapeConteudo a:hover {
-    opacity: 0.7;
-    text-decoration: underline;
-}
 
 /* Botão de voltar */
 .btn-voltar {
@@ -138,6 +108,7 @@ main {
 a {
     text-decoration: none;
 }
+
 .btnEnviar:hover {
     background-color: #357ABD;
 }
@@ -373,4 +344,35 @@ a {
     text-align: center;
     font-size: 2.5rem;
     color: rgb(254, 255, 172);
+}
+
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    width: 100%;
+    background-color: rgb(3, 18, 102);
+    color: white;
+}
+
+.rodapeConteudo {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.rodapeConteudo p {
+    margin: 0;
+}
+
+.rodapeConteudo a {
+    color: rgb(254, 255, 172);
+    text-decoration: none;
+}
+
+.rodapeConteudo a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
 }
