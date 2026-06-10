@@ -1,8 +1,9 @@
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
     background-color: #0a0804;
     color: rgba(255, 255, 255, 0.88);
@@ -10,6 +11,7 @@ body {
     min-height: 100vh;
 }
 
+/* ── BANNER PRINCIPAL (hero) ── */
 .hero {
     position: relative;
     height: 100vh;
@@ -19,22 +21,24 @@ body {
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    background-image: url('../img/santaMissa/imgMissa.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
-/* Fundo com efeito de luz de vela */
 .hero::before {
     content: '';
     position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(ellipse 60% 50% at 50% 60%, rgba(201, 168, 76, 0.18) 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 30% 80%, rgba(180, 80, 20, 0.12) 0%, transparent 60%),
-        radial-gradient(ellipse 30% 40% at 70% 80%, rgba(180, 80, 20, 0.12) 0%, transparent 60%),
-        linear-gradient(to bottom, #0a0804 0%, #1a1208 50%, #0a0804 100%);
-    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(5, 10, 20, 0.75); /* mais escuro e azulado */
+    z-index: 1;
 }
 
-/* Linha dourada que desce do banner */
+/* Linha dourada decorativa embaixo do banner */
 .hero::after {
     content: '';
     position: absolute;
@@ -58,42 +62,25 @@ body {
 }
 
 @keyframes aparecer {
-    from { opacity: 0; transform: translateY(30px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
 
-/* Cruz decorativa que pulsa */
-.cruzDecorativa {
-    font-size: 2rem;
-    color: #c9a84c;
-    opacity: 0.7;
-    letter-spacing: 0.3em;
-    animation: pulsar 3s ease-in-out infinite;
-}
-
-@keyframes pulsar {
-    0%, 100% { opacity: 0.5; }
-    50%       { opacity: 1; }
-}
-
-.heroSubtitulo {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(0.7rem, 1.2vw, 0.9rem);
-    color: #c9a84c;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .heroTitulo {
     font-family: 'Cinzel', serif;
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: 4rem;
+    /* tamanho fixo, fácil de explicar */
     font-weight: 700;
     color: #f0d080;
     letter-spacing: 0.08em;
     line-height: 1;
-    text-shadow:
-        0 0 40px rgba(201, 168, 76, 0.4),
-        0 0 80px rgba(201, 168, 76, 0.15);
 }
 
 .heroLinha {
@@ -103,25 +90,30 @@ body {
 }
 
 .heroFrase {
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-size: 1.2rem;
+    /* tamanho fixo */
     font-style: italic;
-    color: rgba(240, 208, 128, 0.7);
+    color: #f0d080;
     max-width: 600px;
     line-height: 1.7;
+    opacity: 0.7;
+    /* levemente transparente */
 }
 
 .heroAutor {
     font-family: 'Cinzel', serif;
     font-size: 0.75rem;
-    color: rgba(201, 168, 76, 0.5);
+    color: #c9a84c;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    opacity: 0.5;
 }
 
 /* ── ÁREA DE CONTEÚDO ── */
 .conteudo {
     max-width: 900px;
     margin: 0 auto;
+    /* centraliza na página */
     padding: 80px 40px;
     display: flex;
     flex-direction: column;
@@ -150,25 +142,37 @@ body {
 }
 
 /* Cada seção de conteúdo */
-.secao { display: flex; flex-direction: column; gap: 24px; }
+.secao {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
 .secaoTitulo {
     font-family: 'Cinzel', serif;
-    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-size: 1.8rem;
+    /* tamanho fixo */
     color: #f0d080;
     letter-spacing: 0.08em;
     text-align: center;
 }
 
 .secao p {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.9;
-    color: rgba(255, 255, 255, 0.88);
+    color: #e8e0d0;
+    /* cor sólida, sem rgba */
     text-align: justify;
 }
 
-.secao em     { color: #f0d080; font-style: italic; }
-.secao strong { color: #f0d080; }
+.secao em {
+    color: #f0d080;
+    font-style: italic;
+}
+
+.secao strong {
+    color: #f0d080;
+}
 
 /* ── PARTES DA MISSA ── */
 .partesGrid {
@@ -180,22 +184,27 @@ body {
     display: flex;
     gap: 30px;
     padding: 36px 0;
-    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+    border-bottom: 1px solid #2a2010;
+    /* cor sólida simples */
     align-items: flex-start;
 }
 
-/* Número romano grande e desbotado */
 .parteNumero {
     font-family: 'Cinzel', serif;
     font-size: 3rem;
-    color: rgba(201, 168, 76, 0.2);
+    color: #3a2f10;
+    /* cor sólida no lugar de rgba */
     font-weight: 700;
     line-height: 1;
     min-width: 60px;
     text-align: right;
 }
 
-.parteCorpo { display: flex; flex-direction: column; gap: 10px; }
+.parteCorpo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .parteTitulo {
     font-family: 'Cinzel', serif;
@@ -208,7 +217,29 @@ body {
 .parteTexto {
     font-size: 1.05rem;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.75);
+    color: #b0a890;
+    /* cor sólida */
+}
+
+.saibaMais {
+    text-align: center;
+}
+
+.saibaMais a {
+    color: #c9a84c;
+    text-decoration: none;
+    border-bottom: 1px solid #c9a84c;
+    padding-bottom: 2px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.saibaMais a:hover {
+    color: #f0d080;
+    border-bottom-color: #f0d080;
 }
 
 /* ── CURIOSIDADES ── */
@@ -219,41 +250,80 @@ body {
 }
 
 .curiosidadeCard {
-    border: 1px solid rgba(201, 168, 76, 0.2);
+    border: 1px solid #2a2010;
+    border-left: 3px solid #c9a84c;
+    /* faixa dourada — sem ::before */
     border-radius: 2px;
     padding: 28px 22px;
     display: flex;
     flex-direction: column;
     gap: 14px;
-    background: rgba(201, 168, 76, 0.04);
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s, background 0.3s;
-}
-
-/* Faixa dourada na lateral esquerda */
-.curiosidadeCard::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px; height: 100%;
-    background: linear-gradient(to bottom, #c9a84c, transparent);
+    background-color: #111008;
+    /* cor sólida */
+    transition: border-color 0.3s, background-color 0.3s;
 }
 
 .curiosidadeCard:hover {
-    border-color: rgba(201, 168, 76, 0.5);
-    background: rgba(201, 168, 76, 0.08);
+    border-color: #c9a84c;
+    background-color: #1a1608;
 }
 
-.curiosidadeIcone { font-size: 1.6rem; }
+.curiosidadeOrdem {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+}
 
 .curiosidadeCard p {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.75);
+    color: #b0a890;
 }
 
-/* ── ABAS DAS ORAÇÕES ── */
+/* ── CARROSSEL DE ORAÇÕES (bxSlider) ── */
+.carrosselOracoes {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.oracaoSlide {
+    background-color: #0a1628;
+    border: 1px solid #c9a84c;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+}
+
+.oracaoNome {
+    font-size: 1.5rem;
+    color: #c9a84c;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.oracaoTexto {
+    color: #e8e0d0;
+    line-height: 1.9;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* ── VÍDEO ── */
+.missaVideo {
+    width: 100%;
+    height: 400px;
+    /* altura fixa no lugar de aspect-ratio */
+    border: 1px solid #2a2010;
+}
+
+.missaVideo iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
 .oracoesAbas {
     display: flex;
     flex-wrap: wrap;
@@ -263,9 +333,9 @@ body {
 
 .abaOracao {
     padding: 8px 24px;
-    border: 1px solid rgba(201, 168, 76, 0.3);
+    border: 1px solid #c9a84c;
     background: transparent;
-    color: rgba(201, 168, 76, 0.6);
+    color: #c9a84c;
     font-family: 'Cinzel', serif;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
@@ -275,66 +345,54 @@ body {
 }
 
 .abaOracao.ativa {
-    background: rgba(201, 168, 76, 0.15);
-    border-color: #c9a84c;
-    color: #f0d080;
+    background-color: #c9a84c;
+    color: #0a0804;
 }
 
-/* Conteúdo da oração — escondido por padrão */
 .oracaoConteudo {
     display: none;
-    padding: 36px;
-    border: 1px solid rgba(201, 168, 76, 0.15);
-    border-top: none;
-    background: rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.4s ease;
 }
 
-.oracaoConteudo.ativo { display: block; }
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to   { opacity: 1; transform: translateY(0); }
+.oracaoConteudo.ativo {
+    display: block;
+    padding: 36px;
+    border: 1px solid #2a2010;
+    background-color: #111008;
 }
 
 .oracaoConteudo p {
     font-size: 1.1rem;
     line-height: 2.2;
-    color: rgba(240, 208, 128, 0.85);
+    color: #f0d080;
     text-align: center;
     font-style: italic;
-}
 
-/* ── VÍDEO ── */
-.missaVideo {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: 1px solid rgba(201, 168, 76, 0.2);
-}
-
-.missaVideo iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* ── FOOTER ── */
-.rodape {
-    text-align: center;
-    padding: 40px;
-    border-top: 1px solid rgba(201, 168, 76, 0.1);
-    color: rgba(201, 168, 76, 0.4);
-    font-family: 'Cinzel', serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
 }
 
 /* ── RESPONSIVO ── */
 @media (max-width: 768px) {
-    .cabecalho  { padding: 0 20px; }
-    .conteudo   { padding: 60px 20px; gap: 60px; }
-    .parte-item { flex-direction: column; gap: 10px; }
-    .parte-numero { font-size: 2rem; min-width: auto; text-align: left; }
-    .curiosidades-grid { grid-template-columns: 1fr; }
-    .oracoes-abas { justify-content: center; }
+    .conteudo {
+        padding: 60px 20px;
+        gap: 60px;
+    }
+
+    .heroTitulo {
+        font-size: 2.5rem;
+    }
+
+    /* menor no celular */
+    .parteItem {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .parteNumero {
+        font-size: 2rem;
+        min-width: auto;
+        text-align: left;
+    }
+
+    .missaVideo {
+        height: 220px;
+    }
 }
