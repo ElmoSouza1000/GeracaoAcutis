@@ -51,3 +51,20 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.bloco a {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: rgb(254, 255, 172);
+    color: rgb(3, 18, 102);
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.bloco a:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
