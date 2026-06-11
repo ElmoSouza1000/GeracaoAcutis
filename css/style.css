@@ -9,7 +9,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: sans-serif;
     background-color: rgb(3, 18, 102);
     animation-name: aparecer;
     animation-duration: 200ms;

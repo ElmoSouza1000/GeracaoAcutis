@@ -1,17 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: #0a0804;
-    color: rgba(255, 255, 255, 0.88);
-    font-family: 'Cormorant Garamond', serif;
-    min-height: 100vh;
+    font-family: 'Cinzel', serif;
 }
 
-/* ── BANNER PRINCIPAL (hero) ── */
 .hero {
     position: relative;
     height: 100vh;
@@ -34,11 +24,10 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(5, 10, 20, 0.75); /* mais escuro e azulado */
+    background-color: rgba(5, 10, 20, 0.75);
     z-index: 1;
 }
 
-/* Linha dourada decorativa embaixo do banner */
 .hero::after {
     content: '';
     position: absolute;
@@ -50,7 +39,6 @@ body {
     background: linear-gradient(to bottom, #c9a84c, transparent);
 }
 
-/* Conteúdo do banner com animação de entrada */
 .heroConteudo {
     position: relative;
     z-index: 2;
@@ -74,9 +62,7 @@ body {
 }
 
 .heroTitulo {
-    font-family: 'Cinzel', serif;
     font-size: 4rem;
-    /* tamanho fixo, fácil de explicar */
     font-weight: 700;
     color: #f0d080;
     letter-spacing: 0.08em;
@@ -91,17 +77,14 @@ body {
 
 .heroFrase {
     font-size: 1.2rem;
-    /* tamanho fixo */
     font-style: italic;
     color: #f0d080;
     max-width: 600px;
     line-height: 1.7;
     opacity: 0.7;
-    /* levemente transparente */
 }
 
 .heroAutor {
-    font-family: 'Cinzel', serif;
     font-size: 0.75rem;
     color: #c9a84c;
     letter-spacing: 0.2em;
@@ -109,18 +92,15 @@ body {
     opacity: 0.5;
 }
 
-/* ── ÁREA DE CONTEÚDO ── */
 .conteudo {
     max-width: 900px;
     margin: 0 auto;
-    /* centraliza na página */
     padding: 80px 40px;
     display: flex;
     flex-direction: column;
     gap: 80px;
 }
 
-/* Separador decorativo entre seções */
 .separador {
     display: flex;
     align-items: center;
@@ -141,7 +121,6 @@ body {
     font-size: 1.2rem;
 }
 
-/* Cada seção de conteúdo */
 .secao {
     display: flex;
     flex-direction: column;
@@ -149,9 +128,7 @@ body {
 }
 
 .secaoTitulo {
-    font-family: 'Cinzel', serif;
     font-size: 1.8rem;
-    /* tamanho fixo */
     color: #f0d080;
     letter-spacing: 0.08em;
     text-align: center;
@@ -161,7 +138,6 @@ body {
     font-size: 1.1rem;
     line-height: 1.9;
     color: #e8e0d0;
-    /* cor sólida, sem rgba */
     text-align: justify;
 }
 
@@ -174,7 +150,6 @@ body {
     color: #f0d080;
 }
 
-/* ── PARTES DA MISSA ── */
 .partesGrid {
     display: flex;
     flex-direction: column;
@@ -185,15 +160,12 @@ body {
     gap: 30px;
     padding: 36px 0;
     border-bottom: 1px solid #2a2010;
-    /* cor sólida simples */
     align-items: flex-start;
 }
 
 .parteNumero {
-    font-family: 'Cinzel', serif;
     font-size: 3rem;
     color: #3a2f10;
-    /* cor sólida no lugar de rgba */
     font-weight: 700;
     line-height: 1;
     min-width: 60px;
@@ -207,7 +179,6 @@ body {
 }
 
 .parteTitulo {
-    font-family: 'Cinzel', serif;
     font-size: 1.1rem;
     color: #c9a84c;
     letter-spacing: 0.1em;
@@ -218,7 +189,6 @@ body {
     font-size: 1.05rem;
     line-height: 1.8;
     color: #b0a890;
-    /* cor sólida */
 }
 
 .saibaMais {
@@ -230,7 +200,6 @@ body {
     text-decoration: none;
     border-bottom: 1px solid #c9a84c;
     padding-bottom: 2px;
-    font-family: 'Cinzel', serif;
     font-size: 0.85rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -242,7 +211,36 @@ body {
     border-bottom-color: #f0d080;
 }
 
-/* ── CURIOSIDADES ── */
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+#galeria a {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #2a2010;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+#galeria a:hover {
+    border-color: #c9a84c;
+}
+
+#galeria img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+#galeria a:hover img {
+    transform: scale(1.04);
+}
+
 .curiosidadesGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -252,14 +250,12 @@ body {
 .curiosidadeCard {
     border: 1px solid #2a2010;
     border-left: 3px solid #c9a84c;
-    /* faixa dourada — sem ::before */
     border-radius: 2px;
     padding: 28px 22px;
     display: flex;
     flex-direction: column;
     gap: 14px;
     background-color: #111008;
-    /* cor sólida */
     transition: border-color 0.3s, background-color 0.3s;
 }
 
@@ -313,7 +309,6 @@ body {
 .missaVideo {
     width: 100%;
     height: 400px;
-    /* altura fixa no lugar de aspect-ratio */
     border: 1px solid #2a2010;
 }
 

@@ -1,13 +1,16 @@
 $(document).ready(function () {
-    $("#banners ul").bxSlider({
-        auto: true,
-        speed: 1000,
-        // mode: 'fade'
-        // pager: false
-        // mode: 'vertical'
+
+    $(".carrosselOracoes").bxSlider({
+        mode: "horizontal",
+        speed: 500,
+        auto: false,
+        pager: true,
+        controls: true,
+        adaptiveHeight: true
     });
 
-    $('#fotos #galeria').magnificPopup({
+
+    $('#galeria').magnificPopup({
         delegate: 'a',
         type: 'image',
         closeOnContentClick: false,
@@ -21,11 +24,10 @@ $(document).ready(function () {
         },
         zoom: {
             enabled: true,
-            duration: 300, // don't foget to change the duration also in CSS
-            opener: function(element) {
+            duration: 300,
+            opener: function (element) {
                 return element.find('img');
             }
         }
-
     });
 });
