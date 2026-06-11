@@ -120,52 +120,52 @@
 
 /* Cards da Página de Santos */
 #joanaDarc {
-    background-image: url(/img/santosImagem/joanaDarc.jpg);
+    background-image: url(../img/santosImagem/joanaDarc.jpg);
 }
 
 #guido {
-    background-image: url(/img/santosImagem/guidoSchaffer.jpeg);
+    background-image: url(../img/santosImagem/guidoSchaffer.jpeg);
 }
 
 #chiaraCorbella {
-    background-image: url(/img/santosImagem/chiara_violino.jpg);
+    background-image: url(../img/santosImagem/chiara_violino.jpg);
 }
 
 #carloAcutis {
-    background-image: url(/img/santosImagem/carlo/carloInComputer.jpg);
+    background-image: url(../img/santosImagem/carlo/carloInComputer.jpg);
 }
 
 #terezinha {
-    background-image: url(/img/santosImagem/santaTerezinha.jpg);
+    background-image: url(../img/santosImagem/santaTerezinha.jpg);
 }
 
 #chiaraLuce {
-    background-image: url(/img/santosImagem/chiaraLuce.jpg);
+    background-image: url(../img/santosImagem/chiaraLuce.jpg);
 }
 
 #pierGiorgio {
-    background-image: url(/img/santosImagem/pierGiorgio.jpg);
+    background-image: url(../img/santosImagem/pierGiorgio.jpg);
 }
 
 #sandraSabattini {
-    background-image: url(/img/santosImagem/sandraSabattini.jpg);
+    background-image: url(../img/santosImagem/sandraSabattini.jpg);
 }
 
 /* Cards da Home */
 #missa {
-    background-image: url(/img/wallpaper/missa.png);
+    background-image: url(../img/wallpaper/missa.png);
 }
 
 #terco {
-    background-image: url(/img/wallpaper/santoTerço.avif);
+    background-image: url(../img/wallpaper/santoTerço.avif);
 }
 
 #guadalupe {
-    background-image: url(/img/wallpaper/guadalupe.png);
+    background-image: url(../img/wallpaper/guadalupe.png);
 }
 
 #santidade {
-    background-image: url(/img/santosImagem/sandra.jpg);
+    background-image: url(../img/santosImagem/sandra.jpg);
 }
 .card, .cardHome:hover{
     transform: translateY(-2px);

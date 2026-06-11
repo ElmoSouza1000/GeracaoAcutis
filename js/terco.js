@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const grupos = [...document.querySelectorAll(".misterioGrupo")];
     const diaSemanaTexto = document.getElementById("diaSemana");
     const btnRezar = document.getElementById("btnRezar");
-    
+
     const diasPorGrupo = {
         gozosos: "Segunda e Sábado",
         luminosos: "Quinta-feira",
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 diaSemanaTexto.textContent = diasPorGrupo[grupoAlvo];
             }
             if (btnRezar) {
-                btnRezar.setAttribute("href", `/pages/rezar.html?misterio=${grupoAlvo}`);
+                btnRezar.setAttribute("href", `../pages/rezar.html?misterio=${grupoAlvo}`);
             }
         });
     });
