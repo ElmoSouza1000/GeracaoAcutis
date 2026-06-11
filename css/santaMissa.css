@@ -1,7 +1,8 @@
 body {
+    background-color: #0a0804;
+    color: rgba(255, 255, 255, 0.88);
     font-family: 'Cinzel', serif;
 }
-
 .hero {
     position: relative;
     height: 100vh;
