@@ -1,4 +1,4 @@
-# [[ACESSAR SITE] (https://elmosouza1000.github.io/GeracaoAcutis/)
+# [[ACESSAR SITE](https://elmosouza1000.github.io/GeracaoAcutis/)
 
 Projeto desenvolvido na disciplina de Introdução à Tecnologia Web
 1° périodo do curso de Sistemas de Informação
